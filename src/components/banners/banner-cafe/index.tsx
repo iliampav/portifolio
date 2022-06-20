@@ -1,0 +1,13 @@
+import CafebannerAnimation from './cafeanimation';
+import CafebannerBg from '@/public/assets/img/bannerimages/bannercafe.svg'
+import styles from './style.module.scss'
+
+export default function bannerAstro() {
+
+    return(
+        <div className={styles.fullBannerStyle}>
+            <CafebannerBg />
+            <CafebannerAnimation/>
+        </div>
+    )
+}
