@@ -1,18 +1,14 @@
 .dynamicBanner {
     width: 100%;
     height: auto;
-    background-image: url(../../../../public/assets/img/bannerimages/astrobannerbg.svg);
+    background-image: url(../../../../../public/assets/img/bannerimages/bannercafe.svg);
     background-size: cover;
     background-position: center center;
     position: relative;
 
-    svg:first-child {
+    >svg:first-child {
         object-fit: cover;
         display: block;
         opacity: 0;
-    }
-
-    svg {
-        width: 100%;
     }
 }

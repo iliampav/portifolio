@@ -1,15 +1,17 @@
 import type { NextPage } from 'next'
-import Astro from '../components/banners/banner-astro'
-import Cafe from '../components/banners/banner-cafe'
-import Cruze from '../components/banners/banner-sail'
+import Banner from '../components/home/banner'
 
 const Home: NextPage = () => {
-  return (
-      <section>
-        {/* <Astro /> */}
-        {/* <Cafe /> */}
-        <Cruze />
-      </section>
+return (
+  <>
+    <section>
+      <Banner />
+    </section>
+
+    <section>
+
+    </section>
+  </>
   )
 }
 
