@@ -15,8 +15,8 @@ export default function sailAnimation() {
         <>
             <div className={styles.cruzeAnimation}>
                 <div className={styles.animationborder}>
-                    <Cruze className={styles.cruzePosition}/>
                     <WaveBoat className={styles.boatwaves}/>
+                    <Cruze className={styles.cruzePosition}/>
                     <PavkoLogo className={styles.pavkoLogo} />
                 </div>
             </div>

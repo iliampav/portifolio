@@ -68,8 +68,7 @@
     
     .wavesBeach {
         position: absolute;
-        top: 28%;
-        max-width: 100%;
+        top: 0%;
     }
     
     .fish {
@@ -100,5 +99,23 @@
         position: absolute;
         left: 60%;
         top: 77%;
+    }
+}
+
+@media (min-width:550px) {
+    .animationborder {
+        .cruzePosition {
+            transform: rotate(-25deg);
+            left: 22%;
+        }
+    }
+}
+
+@media (min-width:800px) {
+    .animationborder {
+        .cruzePosition {
+            transform: rotate(-25deg);
+            left: 35%;
+        }
     }
 }
