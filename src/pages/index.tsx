@@ -5,9 +5,11 @@ import Cruze from '../components/banners/banner-sail'
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <Cruze />
-    </div>
+      <section>
+        {/* <Astro /> */}
+        {/* <Cafe /> */}
+        <Cruze />
+      </section>
   )
 }
 

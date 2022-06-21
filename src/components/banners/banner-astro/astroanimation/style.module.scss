@@ -10,9 +10,32 @@
     mix-blend-mode:soft-light;
 }
 
-.astrobanner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 15%;
+@media (min-width: 0px) {
+    
+    .astrobanner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 15%;
+    }
+}
+
+@media (min-width: 400px) {
+    
+    .astrobanner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 10%;
+    }
+}
+
+@media (min-width: 700px) {
+    
+    .astrobanner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 5%;
+    }
 }

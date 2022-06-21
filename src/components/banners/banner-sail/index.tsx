@@ -1,11 +1,12 @@
 import SailAnimation from './sailanimation';
 import SailBannerBg from '@/public/assets/img/bannerimages/sailbanner.svg';
+import styles from './styles.module.scss';
 
 export default function sailBanner() {
     return (
-        <div>
-            <SailAnimation />
+        <div className={styles.dynamicBanner}>
             <SailBannerBg />
+            <SailAnimation />
         </div>
     )
 }

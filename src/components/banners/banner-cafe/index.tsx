@@ -5,7 +5,7 @@ import styles from './style.module.scss'
 export default function bannerAstro() {
 
     return(
-        <div className={styles.fullBannerStyle}>
+        <div className={styles.dynamicBanner}>
             <CafebannerBg />
             <CafebannerAnimation/>
         </div>
