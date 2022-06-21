@@ -5,7 +5,7 @@ import Cruze from './banner-sail'
 export default function Banner() {
     return(
         <section>
-            <Astro />
+            <Cruze />
         </section>
     )
 }

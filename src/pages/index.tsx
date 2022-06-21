@@ -3,6 +3,8 @@ import type { NextPage } from 'next'
 
 import Banner from '../components/home/banner'
 import AboutSection from '../components/home/about-txt'
+import GithubSection from '../components/home/github'
+import Footer from '../components/footer'
 
 const Home: NextPage = () => {
 return (
@@ -14,6 +16,8 @@ return (
     </Head>
     <Banner />
     <AboutSection />
+    <GithubSection />
+    <Footer />
   </>
   )
 }
