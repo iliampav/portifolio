@@ -1,6 +1,3 @@
-:root {
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -37,7 +34,6 @@ body {
 body,
 input,
 textarea {
-  font-family: "Cormorant Garamond", serif;
   font-weight: 400;
 }
 
@@ -46,22 +42,18 @@ h2,
 h3,
 h4,
 h5,
-h6,
-strong {
+h6{
   font-weight: 400;
-  font-family: "Cormorant Garamond", serif;
 }
 
 p,
 span {
-  font-family: "Poppins", sans-serif;
   font-weight: 200;
 }
 
 button,
 a {
   cursor: pointer;
-  font-family: "Cormorant Garamond", serif;
   font-weight: normal;
   color: white;
   text-decoration: unset;
