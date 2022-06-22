@@ -7,7 +7,7 @@ export default function AboutHome() {
     return(
         <section className={styles.aboutHome}>
             <div className={styles.textAbout}>
-                <h2>Hi, I'm <strong>Iliam Pavkovic </strong>(He/him)</h2>
+                <h2>Hi, I&apos;m <strong>Iliam Pavkovic </strong>(He/him)</h2>
                 <h1>
                     Front-end developer. <br />
                     Designer.<br />
