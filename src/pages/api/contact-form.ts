@@ -35,7 +35,6 @@ export default function handler(req: RequestData, res: NextApiResponse) {
       text: body.message,
       html: body.message,
     }
-    console.log("3")
 
     return sendgrid.send(msg).then((event) => {
         console.log('Email sent')

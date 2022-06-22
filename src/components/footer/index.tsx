@@ -23,7 +23,6 @@ export default function Footer() {
       }
   
       const JSONdata = JSON.stringify(data)
-      console.log("JSON", JSONdata)
       const endpoint = '/api/contact-form'
       const options = {
         method: 'POST',
@@ -41,7 +40,7 @@ export default function Footer() {
         return;
       }
 
-      console.log(dataResponse)
+      alert(`${dataResponse.name}, a mensagem: ${dataResponse.message} foi enviada com sucesso! `)
     }
 
     return (
