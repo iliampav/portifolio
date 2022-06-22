@@ -38,7 +38,7 @@ export default function handler(req: RequestData, res: NextApiResponse) {
 
     return sendgrid.send(msg).then((event) => {
         console.log('Email sent')
-        return res.status(200).json({ data: `${body.name} ${body.email} ${body.message}`, event })
+        return res.status(200).json({ data: `${body.name}, a mensagem: ${body.message} foi enviada com sucesso!`, event })
       })
       .catch((error) => {
         console.error(error)

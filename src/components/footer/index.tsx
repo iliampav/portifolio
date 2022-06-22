@@ -40,7 +40,7 @@ export default function Footer() {
         return;
       }
 
-      alert(`${dataResponse.name}, a mensagem: ${dataResponse.message} foi enviada com sucesso! `)
+      alert(dataResponse)
     }
 
     return (
