@@ -20,7 +20,7 @@ export default function handler(req: RequestData, res: NextApiResponse) {
       return res.status(400).json({ data: 'Something is not filled' })
     }
 
-    const sendgridApi = process.env.SENDGRID_API_KEY;
+    const sendgridApi = process.env.NEXT_PUBLIC_SENDGRID_API_KEY;
     
     if(!sendgridApi) {
       throw new Error()
@@ -37,7 +37,7 @@ export default function handler(req: RequestData, res: NextApiResponse) {
     }
 
     sendgrid.send(msg).then(() => {
-      
+        console.log('Email sent')
       })
       .catch((error) => {
         console.error(error)
