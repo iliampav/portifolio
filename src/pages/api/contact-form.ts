@@ -1,8 +1,18 @@
-import { NextRequest, NextResponse } from "next/server"
+import type { NextApiRequest, NextApiResponse } from "next"
 
-export default function handler(req: NextRequest, res: NextResponse) {
+interface RequestData extends NextApiRequest{
+  body: {
+    name: 'string';
+    email: 'string';
+    message: 'string';
+  }
+}
+
+export default function handler(req: RequestData, res: NextApiResponse) {
     // Get data submitted in request's body.
     const body = req.body
+
+    console.log(body)
     
     if (!body.name || !body.email || !body.message) {
       // Sends a HTTP bad request error code
