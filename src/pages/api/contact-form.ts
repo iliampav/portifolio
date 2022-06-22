@@ -12,8 +12,6 @@ interface RequestData extends NextApiRequest{
 export default function handler(req: RequestData, res: NextApiResponse) {
     // Get data submitted in request's body.
     const body = req.body
-
-    console.log(body)
     
     if (!body.name || !body.email || !body.message) {
       // Sends a HTTP bad request error code
@@ -36,6 +34,8 @@ export default function handler(req: RequestData, res: NextApiResponse) {
       html: '<strong>and easy to do anywhere, even with Node.js</strong>',
     }
 
+    const JSONdata = JSON.stringify(msg)
+
     sendgrid.send(msg).then(() => {
         console.log('Email sent')
       })
@@ -43,6 +43,5 @@ export default function handler(req: RequestData, res: NextApiResponse) {
         console.error(error)
     })
 
-    // res.status(200).json({ data: `${body.name} ${body.email} ${body.message}` })
-    res.end()
+    res.status(200).json({ JSONdata })
   }
