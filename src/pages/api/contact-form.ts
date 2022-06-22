@@ -43,5 +43,6 @@ export default function handler(req: RequestData, res: NextApiResponse) {
         console.error(error)
     })
 
-    res.status(200).json({ data: `${body.name} ${body.email} ${body.message}` })
+    // res.status(200).json({ data: `${body.name} ${body.email} ${body.message}` })
+    res.end()
   }
