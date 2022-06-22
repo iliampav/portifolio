@@ -1,5 +1,5 @@
 import SailAnimation from './sailanimation';
-import SailBannerBg from '@/public/assets/img/bannerimages/sailbanner.svg';
+import SailBannerBg from '@/public/assets/img/home/bannerimages/sailbanner.svg';
 import styles from './styles.module.scss';
 
 export default function sailBanner() {

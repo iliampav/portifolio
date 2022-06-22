@@ -12,9 +12,8 @@ interface FormElements extends HTMLFormControlsCollection {
 
 export default function Footer() {
     
-    // Handles the submit event on form submit.
     const handleSubmit = async (event: FormEvent<ContactFormElement>) => {
-      // Stop the form from submitting and refreshing the page.
+
       event.preventDefault()
 
       const data = {
@@ -36,14 +35,11 @@ export default function Footer() {
   
       const response = await fetch(endpoint, options)
       const { error } = await response.json();
+
       if (error) {
         console.log(error);
         return;
       }
-  
-    //   const result = await response.json()
-
-      alert(`Hi ${data.name}, you just send your email: ${data.email} and the message ${data.message}`)
     }
 
     return (

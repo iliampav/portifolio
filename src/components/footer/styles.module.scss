@@ -1,84 +1,102 @@
 @import '/src/styles/variables.scss';
 
-.footer {
-    height: auto;
-    width: 100%;
-    background-color: $marine-blue;
-    padding: 0px 20px 20px 20px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    h1 {
-        font-size: 1.2rem;
-        color: white;
-        font-family: 'Noto Sans', sans-serif;
-        margin-top: 3rem;
-    }
-
-    form {
+@media (min-width: 0px) {
+    .footer {
+        height: auto;
         width: 100%;
-
-        > div {
+        background-color: $marine-blue;
+        padding: 0px 20px 20px 20px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+        h1 {
+            font-size: 1.2rem;
+            color: white;
+            font-family: 'Noto Sans', sans-serif;
+            margin-top: 3rem;
+        }
+    
+        form {
+            width: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            flex-direction: column;
+            flex-wrap: wrap;
 
-            label {
-                font-size: 1.2rem;
-                font-family: 'Noto Sans', sans-serif;
+            > div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
                 width: 100%;
+    
+                label {
+                    font-size: 1.2rem;
+                    font-family: 'Noto Sans', sans-serif;
+                    width: 100%;
+                    margin-top: 20px;
+                    color: white;
+                }
+    
+                input {
+                    width: 100%;
+                    margin-top: 5px;
+                    border: 2px solid white;
+                    background-color: transparent;
+                    border-radius: 10px;
+                    padding: 10px 12px;
+                    font-size: 1.2rem;
+                    font-family: 'Noto Sans', sans-serif;
+                    color: white;
+    
+                    &::placeholder {
+                        color: $placeholder-color;
+                    }
+                }
+    
+                textarea {
+                    width: 100%;
+                    margin-top: 5px;
+                    border: 2px solid white;
+                    background-color: transparent;
+                    border-radius: 10px;
+                    padding: 10px 12px;
+                    font-size: 1.2rem;
+                    min-height: 130px;
+                    font-family: 'Noto Sans', sans-serif;
+                    color: white;
+    
+                    &::placeholder {
+                        color: $placeholder-color;
+                    }
+                }
+            }
+    
+            button {
+                width: 100%;
+                background-color: white;
+                padding: 10px 12px;
+                font-size: 1.2rem;
+                color: $marine-blue;
+                border-radius: 10px;
                 margin-top: 20px;
-                color: white;
-            }
-
-            input {
-                width: 100%;
-                margin-top: 5px;
-                border: 2px solid white;
-                background-color: transparent;
-                border-radius: 10px;
-                padding: 10px 12px;
-                font-size: 1.2rem;
+                font-weight: 800;
                 font-family: 'Noto Sans', sans-serif;
-                color: white;
-
-                &::placeholder {
-                    color: $placeholder-color;
-                }
-            }
-
-            textarea {
-                width: 100%;
-                margin-top: 5px;
-                border: 2px solid white;
-                background-color: transparent;
-                border-radius: 10px;
-                padding: 10px 12px;
-                font-size: 1.2rem;
-                min-height: 130px;
-                font-family: 'Noto Sans', sans-serif;
-                color: white;
-
-                &::placeholder {
-                    color: $placeholder-color;
-                }
             }
         }
+    }
+}
 
-        button {
-            width: 100%;
-            background-color: white;
-            padding: 10px 12px;
-            font-size: 1.2rem;
-            color: $marine-blue;
-            border-radius: 10px;
-            margin-top: 20px;
-            font-weight: 800;
-            font-family: 'Noto Sans', sans-serif;
+@media (min-width: 640px) {
+    .footer {
+        form {
+
+            > div:not(:last-of-type) {
+                width: 48%;
+            }
         }
     }
 }

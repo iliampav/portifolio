@@ -1,49 +1,110 @@
 @import '/src/styles/variables.scss';
 
-.aboutHome {
-    background-color: $yellow;
-    height: 100vh;
-    width: 100%;
-    padding: 20px;
+@media (min-width:0px) {
+    .aboutHome {
+        background-color: $yellow;
+        min-height: 100vh;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
 
-    h1 {
-        color: $marine-blue;
-        font-size: 3.7rem;
-        font-family: 'Noto Sans', sans-serif;
-        font-weight: 700;
-        margin-top: 10%;
+        .textAbout {
+
+            h1 {
+                color: $marine-blue;
+                font-size: 3.7rem;
+                font-family: 'Noto Sans', sans-serif;
+                font-weight: 700;
+                margin-top: 10%;
+            }
+        
+            h2 {
+                font-family: 'Noto Sans', sans-serif;
+                color: $marine-blue;
+                margin-top: 20px;
+                font-size: 1.7rem;
+                line-height: 2.7rem;
+            }
+        
+            p {
+                font-family: 'Noto Sans', sans-serif;
+                color: $marine-blue;
+                margin-top: 20px;
+                font-size: 1.1rem;
+                line-height: 1.7rem;
+                font-weight: 400;
+            }
+        
+            p:first-of-type {
+                margin-top: 50px;
+            }
+        
+            p:last-of-type {
+                margin-bottom: 50px;
+            }
+        
+            a {
+                font-family: 'Noto Sans', sans-serif;
+                color: $marine-blue;
+                font-size: 1.6rem;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+    
+        .imageAbout {
+            display: none;
+        }
+        
+    }
+}
+
+@media (min-width: 660px) {
+    .aboutHome { 
+
+        .textAbout {
+            max-width: 350px;
+        }
+    
+        .imageAbout {
+            display: block;
+            width: calc(100% - 350px);
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+        }
     }
 
-    h2 {
-        font-family: 'Noto Sans', sans-serif;
-        color: $marine-blue;
-        margin-top: 20px;
-        font-size: 1.7rem;
-        line-height: 2.7rem;
-    }
+    
+}
 
-    p {
-        font-family: 'Noto Sans', sans-serif;
-        color: $marine-blue;
-        margin-top: 20px;
-        font-size: 1.1rem;
-        line-height: 1.7rem;
-        font-weight: 400;
+@media (min-width: 750px) {
+    .aboutHome { 
+        
+        .textAbout {
+            max-width: 450px;
+        }
+    
+        .imageAbout {
+            display: block;
+            width: calc(100% - 450px);
+        }
     }
+}
 
-    p:first-of-type {
-        margin-top: 50px;
-    }
-
-    p:last-of-type {
-        margin-bottom: 50px;
-    }
-
-    a {
-        font-family: 'Noto Sans', sans-serif;
-        color: $marine-blue;
-        font-size: 1.6rem;
-        font-weight: 600;
-        cursor: pointer;
+@media (min-width: 900px) {
+    .aboutHome { 
+        
+        .textAbout {
+            max-width: 60%;
+        }
+    
+        .imageAbout {
+            width: 30%;
+        }
     }
 }

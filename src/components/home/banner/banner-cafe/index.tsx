@@ -1,5 +1,5 @@
 import CafebannerAnimation from './cafeanimation';
-import CafebannerBg from '@/public/assets/img/bannerimages/bannercafe.svg'
+import CafebannerBg from '@/public/assets/img/home/bannerimages/bannercafe.svg'
 import styles from './style.module.scss'
 
 export default function bannerAstro() {

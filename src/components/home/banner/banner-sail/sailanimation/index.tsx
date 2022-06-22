@@ -1,13 +1,13 @@
-import Cruze from '@/public/assets/img/bannerimages/sail/cruze.svg'
-import WaveBoat from '@/public/assets/img/bannerimages/sail/wave1.svg'
-import PavkoLogo from '@/public/assets/img/bannerimages/sail/pavko.svg'
-import Bird from '@/public/assets/img/bannerimages/sail/birds.svg'
-import WaveBeach from '@/public/assets/img/bannerimages/sail/wave2.svg'
-import Fish from '@/public/assets/img/bannerimages/sail/fish.svg'
-import Turtle from '@/public/assets/img/bannerimages/sail/turtle.svg'
-import Boat from '@/public/assets/img/bannerimages/sail/group.svg'
-import Boatsmall from '@/public/assets/img/bannerimages/sail/boat2.svg'
-import Girlsea from '@/public/assets/img/bannerimages/sail/girlsea.svg'
+import Cruze from '@/public/assets/img/home/bannerimages/sail/cruze.svg'
+import WaveBoat from '@/public/assets/img/home/bannerimages/sail/wave1.svg'
+import PavkoLogo from '@/public/assets/img/home/bannerimages/sail/pavko.svg'
+import Bird from '@/public/assets/img/home/bannerimages/sail/birds.svg'
+import WaveBeach from '@/public/assets/img/home/bannerimages/sail/wave2.svg'
+import Fish from '@/public/assets/img/home/bannerimages/sail/fish.svg'
+import Turtle from '@/public/assets/img/home/bannerimages/sail/turtle.svg'
+import Boat from '@/public/assets/img/home/bannerimages/sail/group.svg'
+import Boatsmall from '@/public/assets/img/home/bannerimages/sail/boat2.svg'
+import Girlsea from '@/public/assets/img/home/bannerimages/sail/girlsea.svg'
 import styles from './styles.module.scss';
 
 export default function sailAnimation() {
