@@ -23,7 +23,7 @@ export default function handler(req: RequestData, res: NextApiResponse) {
     const sendgridApi = process.env.NEXT_PUBLIC_SENDGRID_API_KEY;
     
     if(!sendgridApi) {
-      throw new Error()
+      return res.status(500).json({ data: 'There is not a key' })
     } 
 
     sendgrid.setApiKey(sendgridApi)
@@ -35,13 +35,16 @@ export default function handler(req: RequestData, res: NextApiResponse) {
       text: body.message,
       html: body.message,
     }
+    console.log("3")
 
-    sendgrid.send(msg).then(() => {
+    return sendgrid.send(msg).then((event) => {
         console.log('Email sent')
+        return res.status(200).json({ data: `${body.name} ${body.email} ${body.message}`, event })
       })
       .catch((error) => {
         console.error(error)
+        return res.status(500).json({ data: `${body.name} ${body.email} ${body.message}`, error })
     })
 
-    res.status(200).json({ data: `${body.name} ${body.email} ${body.message}` })
+    
   }

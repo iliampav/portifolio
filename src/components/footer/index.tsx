@@ -34,12 +34,14 @@ export default function Footer() {
       }
   
       const response = await fetch(endpoint, options)
-      const { error } = await response.json();
+      const { error, data: dataResponse } = await response.json();
 
       if (error) {
         console.log(error);
         return;
       }
+
+      console.log(dataResponse)
     }
 
     return (
