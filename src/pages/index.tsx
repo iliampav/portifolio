@@ -4,6 +4,7 @@ import type { NextPage } from 'next'
 import Banner from '../components/home/banner'
 import AboutSection from '../components/home/about-txt'
 import GithubSection from '../components/home/github'
+import Projects from '../components/home/projectsection'
 import Footer from '../components/footer'
 
 const Home: NextPage = () => {
@@ -20,6 +21,7 @@ return (
     </Head>
     <Banner />
     <AboutSection />
+    <Projects />
     <GithubSection />
     <Footer />
   </>
