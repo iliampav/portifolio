@@ -1,16 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from "next"
 import Sib from 'sib-api-v3-sdk'
 
-
-interface RequestData extends NextApiRequest{
-  body: {
-    name: 'string';
-    email: 'string';
-    message: 'string';
-  }
-}
-
-export default function handler(req: RequestData, res: NextApiResponse) {
+export default function handler(req, res) {
   // Get data submitted in request's body.
   const body = req.body
   
