@@ -6,7 +6,6 @@ import itxPic from '@/public/assets/img/home/projectssection/itximg.png'
 import signatureImg from '@/public/assets/img/home/projectssection/signatureimg.png'
 import tincoimg from '@/public/assets/img/home/projectssection/tincoimg.png'
 import yahcafeimg from '@/public/assets/img/home/projectssection/yahcafeimg.png'
-import { useEffect } from 'react'
 
 export default function Projects() {
 
