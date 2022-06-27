@@ -108,3 +108,17 @@
         }
     }
 }
+
+@media (min-width: 900px) {
+    .aboutHome { 
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1500px) {
+    .aboutHome { 
+        .imageAbout {
+            width: 20%;
+        }
+    }
+}

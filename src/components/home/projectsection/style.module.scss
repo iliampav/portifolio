@@ -137,3 +137,13 @@
         }
     }
 }
+
+@media (min-width: 960px) {
+    .nextBanner {
+        display: none;
+    }
+
+    .prevBanner {
+       display: none;
+    }
+}

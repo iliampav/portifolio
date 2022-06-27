@@ -7,22 +7,7 @@
     padding: 20px;
     padding-top: 40px;
     position: relative;
-
-    >p {
-        color: white;
-        margin-top: 20px;
-        font-size: 1.4rem;
-        font-family: 'Noto Sans', sans-serif;
-    }
-
-    >h3 {
-        color: white;
-        margin-top: 5px;
-        font-weight: 600;
-        font-size: 1.8rem;
-        font-family: 'Noto Sans', sans-serif;
-    }
-
+    
     >svg {
         position: absolute;
         left: 0;
@@ -32,73 +17,143 @@
         opacity: .1;
     }
 
-    h1 {
-        font-size: 1.6rem;
-        color: white;
-        font-family: 'Noto Sans', sans-serif;
-    }
+    .container {
 
-    .repoBox {
-        border: solid 1px $yellow;
-        border-radius: 10px;
-        padding: 15px 10px 10px;
-        margin-top: 20px;
-
-        h2 {
+        .gitBoxContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+    
+            .repoBox {
+                border: solid 1px $yellow;
+                border-radius: 10px;
+                padding: 15px 10px 10px;
+                margin-top: 20px;
+                width: 100%;
+        
+                h2 {
+                    color: white;
+                    font-family: 'Noto Sans', sans-serif;
+                    margin-bottom: 10px;
+                }
+        
+                .language {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+        
+                    p {
+                        color: white;
+                        font-family: 'Noto Sans', sans-serif;
+                    }
+        
+                    >div {
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        margin-right: 8px;
+        
+                        &.javascript {
+                            background-color: yellow;
+                        }
+        
+                        &.typescript {
+                            background-color: rgb(0, 170, 255);
+                        }
+                    }
+                }
+        
+                .gitBtn {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+        
+                    >a {
+                        background-color: $yellow;
+                        width: 32.3%;
+                        border-radius: 10px;
+                        padding: 15px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        margin-top: 15px;
+                        cursor: pointer;
+        
+                        p {
+                            font-family: "Noto Sans", sans-serif;
+                            font-size: .9rem;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    
+        >p {
+            color: white;
+            margin-top: 20px;
+            font-size: 1.4rem;
+            font-family: 'Noto Sans', sans-serif;
+        }
+    
+        >h3 {
+            color: white;
+            margin-top: 5px;
+            font-weight: 600;
+            font-size: 1.8rem;
+            font-family: 'Noto Sans', sans-serif;
+        }
+    
+        h1 {
+            font-size: 1.6rem;
             color: white;
             font-family: 'Noto Sans', sans-serif;
-            margin-bottom: 10px;
         }
 
-        .language {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
+    }
+}
+@media (min-width: 700px) {
+    .githubSection {
 
-            p {
-                color: white;
-                font-family: 'Noto Sans', sans-serif;
-            }
+        .container {
 
-            >div {
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                margin-right: 8px;
-
-                &.javascript {
-                    background-color: yellow;
+            .gitBoxContainer {
+                justify-content: flex-start;
+    
+                .repoBox {
+                    width: 49%;
                 }
-
-                &.typescript {
-                    background-color: rgb(0, 170, 255);
+    
+                .repoBox:first-child {
+                    margin-right: 10px;
                 }
             }
         }
+    }
+}
 
-        .gitBtn {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+@media (min-width: 1200px) {
+    .githubSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        > svg {
+            left: 4%;
+            top: 10%;
+            width: 30%;
+        }
 
-            >a {
-                background-color: $yellow;
-                width: 32.3%;
-                border-radius: 10px;
-                padding: 15px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                margin-top: 15px;
-                cursor: pointer;
-
-                p {
-                    font-family: "Noto Sans", sans-serif;
-                    font-size: .9rem;
-                    margin-top: 10px;
-                }
+        .container {
+            width: 1000px;
+    
+            .gitBoxContainer {
+                margin-left: auto;
+                margin-right: auto;
             }
+
         }
     }
 }
