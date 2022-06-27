@@ -1,36 +1,7 @@
-.projectsSection {
-    min-height: 80vh;
-    width: 100vw;
-    position: relative;
-    padding-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-     
-    .imagecontainer {
-        width: 100%;
-    }
-
-    a {
-        position: absolute;
-        top: 0;
-    }
-
-    a.active {
-        z-index: 40;
-    }
-
-    a.left {
-        left: -100%;
-        z-index: 20;
-    }
-
-    a.right {
-        left: 100%;
-        z-index: 20;
-    }
-
-    a.last {
-        left: -100%;
+@media (min-width: 0px) {
+    
+    .projectsContainer {
+        position: relative;
     }
 
     .prevBanner {
@@ -40,6 +11,15 @@
         z-index: 50;
         position: absolute;
         height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        cursor: pointer;
+
+        svg {
+            max-width: 40%;
+        }
     }
 
     .nextBanner {
@@ -49,46 +29,111 @@
         z-index: 50;
         position: absolute;
         height: 100%;
-    }
-
-    &:hover h1 {
-        font-size: 2.7rem;
-        transition: all .5s ease-in-out;
-    }
-
-    &:hover .nextBanner, &:hover .prevBanner {
-        display: none;
-    }
-
-    a {
-        width: 100%;
-        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
         cursor: pointer;
-        padding-top: 50px;
-        display: block;
 
-        span {
-            z-index: -1;
+        svg {
+            max-width: 40%;
+        }
+    }
+
+    .projectsSection {
+        min-height: 80vh;
+        width: 100vw;
+        position: relative;
+        padding-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        .imagecontainer {
+            width: 100%;
         }
 
-        h1 {
-            font-family: 'Noto Sans', sans-serif;
-            z-index: 2;
-            font-size: 3.5rem;
-            font-weight: 600;
-            text-align: center;
-            display: block;
+        a {
+            position: absolute;
+            top: 0;
+        }
+
+        a.active {
+            z-index: 40;
+        }
+
+        a.left {
+            left: -100%;
+            z-index: 20;
+        }
+
+        a.right {
+            left: 100%;
+            z-index: 20;
+        }
+
+        a.last {
+            left: -100%;
+        }
+
+        &:hover h1 {
+            font-size: 2.7rem;
             transition: all .5s ease-in-out;
         }
+
+        &:hover {
+            z-index: 100;
+        }
+
+        &:hover .nextBanner, &:hover .prevBanner {
+            display: none;
+        }
+
+        a {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            padding-top: 50px;
+            display: block;
+
+            span {
+                z-index: -1;
+            }
+
+            h1 {
+                font-family: 'Noto Sans', sans-serif;
+                z-index: 2;
+                font-size: 3.5rem;
+                font-weight: 600;
+                text-align: center;
+                display: block;
+                transition: all .5s ease-in-out;
+            }
+        }
+
+        span {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        img {
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .nextBanner {
+        svg {
+            max-width: 20%;
+            margin-left: 45px;
+        }
     }
 
-    span {
-        width: 100%;
-        min-height: 100%;
-    }
-
-    img {
-        object-fit: cover;
-        object-position: top;
+    .prevBanner {
+        svg {
+            max-width: 20%;
+            margin-right: 45px;
+        }
     }
 }

@@ -12,3 +12,11 @@
         opacity: 0;
     }
 }
+
+@media (min-width:960px) {
+    .dynamicBanner {
+        background-position: bottom center;
+        background-size: 110%;
+        min-height: 200vh;
+    }
+} 
