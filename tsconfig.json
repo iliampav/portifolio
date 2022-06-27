@@ -19,6 +19,6 @@
       "@/public/*": ["/public/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/api/contact-form.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/api/contact-form.js", "src/components/home/projectsection/index.tsx"],
   "exclude": ["node_modules"]
 }
