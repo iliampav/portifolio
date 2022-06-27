@@ -10,6 +10,11 @@ import yahcafeimg from '@/public/assets/img/home/projectssection/yahcafeimg.png'
 
 import gsap from "gsap";
 
+let tl: GSAPTimeline;
+let tlConfig: GSAPTimelineVars = {
+  paused: true
+};
+
 export default function Projects() {
 
     const slider = useRef(null)
@@ -30,16 +35,27 @@ export default function Projects() {
         e.preventDefault()
 
         const bannerPostion = e.currentTarget.dataset.position
+        const bannerLeft = document.querySelectorAll('[data-position~="left"]')[0]
+        const bannerRight = document.querySelectorAll('[data-position~="right"]')[0]
+        const bannerCenter = document.querySelectorAll('[data-position~="center"]')[0]
+        const bannerNone = document.querySelectorAll('[data-position~="none"]')[0]
+
+        const leftBanner = gsap.timeline(tlConfig)
+              leftBanner.to(bannerLeft, {left: '+=100%', duration: 1}, 'together')
+                        .to(bannerCenter, {left: '+=100%', duration: 1}, 'together')
+                        .to(bannerRight, {left: '+=100%', duration: 1}, 'together')
+                        .fromTo(bannerNone, {left: '-200%', duration: 0}, {left: '+=100%', duration: 1}, 'together')
 
         switch(bannerPostion) {
             case 'center':
-                console.log('banner ativo')
+                console.log(bannerCenter)
+                console.log(bannerNone)
                 break;
             case 'left':
-                console.log('banner left')
+                leftBanner.play()
                 break;
             case 'right':
-                console.log('banner right')
+                console.log(bannerRight)
                 break;
         }
     }
@@ -110,9 +126,11 @@ export default function Projects() {
                 />
             </a>
             <a className={styles.nextBanner}
+               onClick={changeCarrousselImg}
                data-position='right'
             ></a>
             <a className={styles.prevBanner}
+               onClick={changeCarrousselImg}
                data-position='left'
             ></a>
         </section>
