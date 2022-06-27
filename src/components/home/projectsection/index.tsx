@@ -10,13 +10,14 @@ import yahcafeimg from '@/public/assets/img/home/projectssection/yahcafeimg.png'
 
 import gsap from "gsap";
 
-let tl: GSAPTimeline;
 let tlConfig: GSAPTimelineVars = {
   paused: true
 };
 
 export default function Projects() {
 
+
+    // Bannner projects carroussel
     const slider = useRef(null)
 
     const zoomIn = (e:React.MouseEvent<HTMLElement>) => {
@@ -46,6 +47,12 @@ export default function Projects() {
                         .to(bannerRight, {left: '+=100%', duration: 1}, 'together')
                         .fromTo(bannerNone, {left: '-200%', duration: 0}, {left: '+=100%', duration: 1}, 'together')
 
+        const rightBanner = gsap.timeline(tlConfig)
+              rightBanner.to(bannerLeft, {left: '-=100%', duration: 1}, 'together')
+                         .to(bannerCenter, {left: '-=100%', duration: 1}, 'together')
+                         .to(bannerRight, {left: '-=100%', duration: 1}, 'together')
+                         .fromTo(bannerNone, {left: '200%', duration: 0}, {left: '-=100%', duration: 1}, 'together')
+
         switch(bannerPostion) {
             case 'center':
                 console.log(bannerCenter)
@@ -53,14 +60,20 @@ export default function Projects() {
                 break;
             case 'left':
                 leftBanner.play()
+                bannerLeft.setAttribute("data-position", "center");
+                bannerCenter.setAttribute("data-position", "right");
+                bannerNone.setAttribute("data-position", "left");
+                bannerRight.setAttribute("data-position", "none");
                 break;
             case 'right':
-                console.log(bannerRight)
-                break;
+                rightBanner.play()
+                bannerLeft.setAttribute("data-position", "none");
+                bannerCenter.setAttribute("data-position", "left");
+                bannerNone.setAttribute("data-position", "right");
+                bannerRight.setAttribute("data-position", "center");
         }
     }
-
-    // test carroussel
+    // end banners projects carroussel
 
     return (
         <section className={styles.projectsSection}
