@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import type { NextPage } from 'next'
+import Name from 'src/components/about/name'
 
 const Home: NextPage = () => {
 return (
@@ -11,16 +12,7 @@ return (
       <meta name="description" content="The page talks about the path and the field to become a front-end developer."></meta>
     </Head>
 
-    <section>
-        <h1>Hellow world about</h1>
-        <Link href="/">
-            <a>
-                <u>
-                    <strong>Learn more &gt;</strong>
-                </u>
-            </a>
-        </Link>
-    </section>
+    <Name />
 
   </>
   )
