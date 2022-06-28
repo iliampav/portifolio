@@ -1,0 +1,32 @@
+
+@import '/src/styles/variables.scss';
+
+.experience {
+    background-color: $yellow;
+    height: 100vh;
+    padding: 20px;
+    padding-bottom: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
+    p {
+        font-family: 'Noto Sans', sans-serif;
+        color: white;
+        margin-top: 20px;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 400;
+    }
+
+    div {
+        background-image: url(/_next/static/media/experienceimg.80b4e8c8.svg);
+        height: 73%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        width: 100vw;
+    }
+}
