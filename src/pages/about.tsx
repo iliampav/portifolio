@@ -3,6 +3,7 @@ import Link from 'next/link'
 import type { NextPage } from 'next'
 import Name from 'src/components/about/name'
 import Experience from 'src/components/about/somexp'
+import Organized from 'src/components/about/organized'
 
 const Home: NextPage = () => {
 return (
@@ -15,7 +16,7 @@ return (
 
     <Name />
     <Experience />
-
+    <Organized />
   </>
   )
 }
