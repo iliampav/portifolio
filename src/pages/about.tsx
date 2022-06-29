@@ -4,6 +4,7 @@ import type { NextPage } from 'next'
 import Name from 'src/components/about/name'
 import Experience from 'src/components/about/somexp'
 import Organized from 'src/components/about/organized'
+import AwesomeTools from 'src/components/about/awesometools'
 
 const Home: NextPage = () => {
 return (
@@ -17,6 +18,7 @@ return (
     <Name />
     <Experience />
     <Organized />
+    <AwesomeTools />
   </>
   )
 }

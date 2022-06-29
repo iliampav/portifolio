@@ -1,0 +1,60 @@
+@import '/src/styles/variables.scss';
+
+.toolssection {
+    background-color: $green-blue;
+    min-height: 100vh;
+    padding: 20px;
+
+    .toolstxt {
+
+        h1 {
+            color: white;
+            font-size: 3rem;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 700;
+            margin-top: 1%;
+        }
+        
+        h2 {
+            font-family: 'Noto Sans', sans-serif;
+            color: white;
+            margin-top: 10px;
+            font-size: 1.9rem;
+            line-height: 2.7rem;
+        }
+
+        p {
+            font-family: 'Noto Sans', sans-serif;
+            color: white;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            line-height: 1.7rem;
+            font-weight: 400;
+        }
+    }
+
+    .toolsvectors {
+        width: 100vw;
+        margin-left: -20px;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        flex-wrap: wrap;
+
+        >div {
+            
+            width: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            max-height: calc(100% / 7);
+            
+
+            svg {
+                margin: auto;
+                display: block;
+            }
+        }
+    }
+}
