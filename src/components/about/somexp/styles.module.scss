@@ -1,32 +1,84 @@
 
 @import '/src/styles/variables.scss';
 
-.experience {
-    background-color: $yellow;
-    height: 100vh;
-    padding: 20px;
-    padding-bottom: 0;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
+@media (min-width:0px) {
+    .experience {
+        background-color: $yellow;
+        height: 100vh;
+        padding: 20px;
+        padding-bottom: 0;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        
+        p {
+            font-family: 'Noto Sans', sans-serif;
+            color: white;
+            margin-top: 20px;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-weight: 400;
+        }
     
-    p {
-        font-family: 'Noto Sans', sans-serif;
-        color: white;
-        margin-top: 20px;
-        font-size: 1.5rem;
-        line-height: 2rem;
-        font-weight: 400;
+        div {
+            background-image: url(../../../../public/assets/img/about/experienceimg.svg);
+            height: 73%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+            width: 100vw;
+        }
     }
+}
 
-    div {
-        background-image: url(../../../../public/assets/img/about/experienceimg.svg);
-        height: 73%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: top center;
-        width: 100vw;
+@media (min-width:420px) {
+    .experience {
+        align-items: flex-start;
+
+        div {
+            margin-left: -20px;
+        }
     }
+}
+
+@media (min-width:550px) {
+    .experience {
+
+        div {
+            position: absolute;
+            bottom: 0%;
+            right: 0;
+            background-size: contain;
+            background-position: right center;
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    .experience {
+        justify-content: center;
+        p {
+            max-width: 80%;
+            z-index: 10;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+            color: $marine-blue;
+            border-radius: 30px;
+            box-shadow: rgb(0 0 0 / 33%) 7.95px 8.95px 7.6px;
+
+            br {
+                display: none;
+            }
+        }
+        div {
+            height: 100%;
+            z-index: 0;
+        }
+    }
+}
+
+@media (min-width: 770px) {
+
 }
