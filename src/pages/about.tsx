@@ -5,6 +5,7 @@ import Name from 'src/components/about/name'
 import Experience from 'src/components/about/somexp'
 import Organized from 'src/components/about/organized'
 import AwesomeTools from 'src/components/about/awesometools'
+import Teamwork from 'src/components/about/teamwork'
 
 const Home: NextPage = () => {
 return (
@@ -19,6 +20,7 @@ return (
     <Experience />
     <Organized />
     <AwesomeTools />
+    <Teamwork />
   </>
   )
 }
