@@ -1,14 +1,16 @@
+import Image from 'next/image'
+
 import styles from './styles.module.scss'
-import Node from '@/public/assets/img/about/tilanguages/nodejs.svg'
-import Reactjs from '@/public/assets/img/about/tilanguages/reactjs.svg'
-import Html from '@/public/assets/img/about/tilanguages/html5.svg'
-import Css from '@/public/assets/img/about/tilanguages/css3.svg'
-import Typescript from '@/public/assets/img/about/tilanguages/typescript.svg'
-import Javascript from '@/public/assets/img/about/tilanguages/javascript.svg'
-import Sass from '@/public/assets/img/about/tilanguages/sass.svg'
-import Styledcomponents from '@/public/assets/img/about/tilanguages/styledcomponents.svg'
-import Greensock from '@/public/assets/img/about/tilanguages/greensock.svg'
-import Bootstrap from '@/public/assets/img/about/tilanguages/bootstrap.svg'
+import node from '@/public/assets/img/about/tilanguages/nodejs.png'
+import reactjs from '@/public/assets/img/about/tilanguages/reactjs.png'
+import html from '@/public/assets/img/about/tilanguages/html5.png'
+import css from '@/public/assets/img/about/tilanguages/css3.png'
+import typescript from '@/public/assets/img/about/tilanguages/typescript.png'
+import javascript from '@/public/assets/img/about/tilanguages/javascript.png'
+import sass from '@/public/assets/img/about/tilanguages/sass.png'
+import styledcomponents from '@/public/assets/img/about/tilanguages/styledcomponents.png'
+import greensock from '@/public/assets/img/about/tilanguages/greensock.png'
+import bootstrap from '@/public/assets/img/about/tilanguages/bootstrap.png'
 
 export default function AwesomeTools() {
     return (
@@ -21,34 +23,94 @@ export default function AwesomeTools() {
                 </div>
                 <div className={styles.toolsvectors}>
                     <div>
-                        <Node/>
+                        <Image 
+                            src={node}
+                            alt="Picture of the author"
+                            width="100%"
+                            height="100%"
+                            layout="fill" 
+                        />
                     </div>
                     <div>
-                    <Reactjs/>
+                        <Image 
+                            src={reactjs}
+                            alt="Picture of the author"
+                            width="100%"
+                            height="100%"
+                            layout="fill" 
+                        />
                     </div>
                     <div>
-                    <Html/>
+                        <Image 
+                            src={html}
+                            alt="Picture of the author"
+                            width="100%"
+                            height="100%"
+                            layout="fill" 
+                        />
                     </div>
                     <div>
-                    <Css/>
+                        <Image 
+                            src={css}
+                            alt="Picture of the author"
+                            width="100%"
+                            height="100%"
+                            layout="fill" 
+                        />
                     </div>
                     <div>
-                    <Typescript/>
+                        <Image 
+                            src={typescript}
+                            alt="Picture of the author"
+                            width="100%"
+                            height="100%"
+                            layout="fill" 
+                        />
                     </div>
                     <div>
-                    <Javascript/>
+                        <Image 
+                            src={javascript}
+                            alt="Picture of the author"
+                            width="100%"
+                            height="100%"
+                            layout="fill" 
+                        />
                     </div>
                     <div>
-                    <Sass/>
+                        <Image 
+                            src={sass}
+                            alt="Picture of the author"
+                            width="100%"
+                            height="100%"
+                            layout="fill" 
+                        />
                     </div>
                     <div>
-                    <Styledcomponents/>
+                        <Image 
+                            src={styledcomponents}
+                            alt="Picture of the author"
+                            width="100%"
+                            height="100%"
+                            layout="fill" 
+                        />
                     </div>
                     <div>
-                    <Greensock/>
+                        <Image 
+                            src={greensock}
+                            alt="Picture of the author"
+                            width="100%"
+                            height="100%"
+                            layout="fill" 
+                        />
                     </div>
                     <div>
-                    <Bootstrap/>   
+                        <Image 
+                            src={bootstrap}
+                            alt="Picture of the author"
+                            width="100%"
+                            height="100%"
+                            layout="fill" 
+                        />
                     </div> 
                 </div>
             </div>

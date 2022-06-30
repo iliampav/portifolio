@@ -1,7 +1,7 @@
 @import '/src/styles/variables.scss';
 
 .toolssection {
-    background-color: $green-blue;
+    background-color: $marine-blue;
     min-height: 100vh;
     padding: 20px;
 
@@ -45,15 +45,16 @@
         >div {
             
             width: 50%;
+            height: 100%;
             overflow: hidden;
             display: flex;
             justify-content: center;
             max-height: calc(100% / 7);
-            
+            height: 16vh;
+            position: relative;
 
-            svg {
-                margin: auto;
-                display: block;
+            img {
+                object-fit: cover;
             }
         }
     }
