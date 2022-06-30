@@ -30,6 +30,18 @@
             background-position: top center;
             width: 100vw;
         }
+
+        .reacticon {
+            display: none;
+        }
+
+        .nodeicon {
+            display: none
+        }
+
+        .greensockicon {
+            display: none;
+        }
     }
 }
 
@@ -79,6 +91,37 @@
     }
 }
 
-@media (min-width: 770px) {
+@media (min-width: 730px) {
+    .experience {
 
+        .reacticon {
+            display: block;
+            position: absolute;
+            width: 250px;
+            height: 90px;
+            background-image: unset;
+            top: 10%;
+            left: 5%;
+        }
+
+        .nodeicon {
+            display: block;
+            position: absolute;
+            width: 150px;
+            height: 50px;
+            background-image: unset;
+            top: 73%;
+            left: 15%;
+        }
+
+        .greensockicon {
+            display: block;
+            position: absolute;
+            width: 150px;
+            height: 50px;
+            background-image: unset;
+            top: 34%;
+            left: 20%;
+        }
+    }
 }
