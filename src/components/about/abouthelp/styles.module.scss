@@ -1,0 +1,34 @@
+@import '/src/styles/variables.scss';
+
+.aboutHelp {
+    background-color: $marine-blue;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    
+    >p {
+        color: white;
+        margin-top: 20px;
+        font-size: 1.4rem;
+        font-family: 'Noto Sans', sans-serif;
+        margin: 20px 0 5px;
+    }
+
+    >h3 {
+        color: white;
+        margin-top: 5px;
+        font-weight: 600;
+        font-size: 1.8rem;
+        font-family: 'Noto Sans', sans-serif;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        color: white;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 600;
+        margin-bottom: 40px;
+    }
+}
