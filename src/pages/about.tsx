@@ -6,6 +6,7 @@ import Experience from 'src/components/about/somexp'
 import Organized from 'src/components/about/organized'
 import AwesomeTools from 'src/components/about/awesometools'
 import Teamwork from 'src/components/about/teamwork'
+import Principles from 'src/components/about/principles'
 
 const Home: NextPage = () => {
 return (
@@ -21,6 +22,7 @@ return (
     <Organized />
     <AwesomeTools />
     <Teamwork />
+    <Principles />
   </>
   )
 }

@@ -26,8 +26,6 @@ export default function AwesomeTools() {
                         <Image 
                             src={node}
                             alt="Picture of the author"
-                            width="100%"
-                            height="100%"
                             layout="fill" 
                         />
                     </div>
@@ -35,8 +33,6 @@ export default function AwesomeTools() {
                         <Image 
                             src={reactjs}
                             alt="Picture of the author"
-                            width="100%"
-                            height="100%"
                             layout="fill" 
                         />
                     </div>
@@ -44,8 +40,6 @@ export default function AwesomeTools() {
                         <Image 
                             src={html}
                             alt="Picture of the author"
-                            width="100%"
-                            height="100%"
                             layout="fill" 
                         />
                     </div>
@@ -53,8 +47,6 @@ export default function AwesomeTools() {
                         <Image 
                             src={css}
                             alt="Picture of the author"
-                            width="100%"
-                            height="100%"
                             layout="fill" 
                         />
                     </div>
@@ -62,8 +54,6 @@ export default function AwesomeTools() {
                         <Image 
                             src={typescript}
                             alt="Picture of the author"
-                            width="100%"
-                            height="100%"
                             layout="fill" 
                         />
                     </div>
@@ -71,8 +61,6 @@ export default function AwesomeTools() {
                         <Image 
                             src={javascript}
                             alt="Picture of the author"
-                            width="100%"
-                            height="100%"
                             layout="fill" 
                         />
                     </div>
@@ -80,8 +68,6 @@ export default function AwesomeTools() {
                         <Image 
                             src={sass}
                             alt="Picture of the author"
-                            width="100%"
-                            height="100%"
                             layout="fill" 
                         />
                     </div>
@@ -89,8 +75,6 @@ export default function AwesomeTools() {
                         <Image 
                             src={styledcomponents}
                             alt="Picture of the author"
-                            width="100%"
-                            height="100%"
                             layout="fill" 
                         />
                     </div>
@@ -98,8 +82,6 @@ export default function AwesomeTools() {
                         <Image 
                             src={greensock}
                             alt="Picture of the author"
-                            width="100%"
-                            height="100%"
                             layout="fill" 
                         />
                     </div>
@@ -107,8 +89,6 @@ export default function AwesomeTools() {
                         <Image 
                             src={bootstrap}
                             alt="Picture of the author"
-                            width="100%"
-                            height="100%"
                             layout="fill" 
                         />
                     </div> 
