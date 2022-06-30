@@ -42,6 +42,11 @@
             justify-content: space-between;
             position: relative;
 
+
+            .chart {
+                display: none;
+            }
+
             >svg {
                 transform: scale(.9);
                 margin-left: -30px;
@@ -56,6 +61,10 @@
                 max-height: 70vh;
                 margin-top: 65px;
             }
+
+            .webIcons { 
+                display: none;
+            }
         }
     }
 }
@@ -67,6 +76,41 @@
 
             .nameicons {
                 margin-top: 30px;
+                margin-left: 40px;
+            }
+        }
+    }
+}
+
+@media (min-width: 730px) {
+    .namesection {
+        .namevectors {
+            .chart {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .nameicons {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 730px) {
+    .namesection {
+        .namevectors {
+            .chart {
+                display: none;
+            }
+
+            .chart700 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
             }
         }
     }

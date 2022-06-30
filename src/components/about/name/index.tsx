@@ -5,6 +5,8 @@ import Dice from '@/public/assets/img/about/dice.svg'
 import Controller from '@/public/assets/img/about/controller.svg'
 import Phone from '@/public/assets/img/about/phone.svg'
 import Ghost from '@/public/assets/img/about/ghost.svg'
+import Chart from '@/public/assets/img/about/chart400.svg'
+import Chart700 from '@/public/assets/img/about/chart700.svg'
 
 export default function Name() {
     return (
@@ -23,8 +25,20 @@ export default function Name() {
                         <Phone />
                         <Ghost />
                     </div>
+                    <div className={styles.chart}>
+                        <Chart />
+                    </div>
+                    <div className={styles.chart700}>
+                        <Chart700 />
+                    </div>
                 </div>
             </div>
         </section>
     )
 }
+
+// geek 20
+// game player 15
+// studier 27
+// family 30
+// sport 8
