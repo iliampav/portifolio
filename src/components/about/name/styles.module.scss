@@ -1,58 +1,73 @@
 @import '/src/styles/variables.scss';
 
-.namesection {
-    background-color: $green-blue;
-    min-height: 100vh;
-    padding: 20px;
+@media (min-width:0px) {
+    
+    .namesection {
+        background-color: $green-blue;
+        min-height: 100vh;
+        padding: 20px;
 
-    .nametxt {
+        .nametxt {
 
-        h1 {
-            color: white;
-            font-size: 3rem;
-            font-family: 'Noto Sans', sans-serif;
-            font-weight: 700;
-            margin-top: 1%;
-        }
-        
-        h2 {
-            font-family: 'Noto Sans', sans-serif;
-            color: white;
-            margin-top: 10px;
-            font-size: 1.9rem;
-            line-height: 2.7rem;
-        }
+            h1 {
+                color: white;
+                font-size: 3rem;
+                font-family: 'Noto Sans', sans-serif;
+                font-weight: 700;
+                margin-top: 1%;
+            }
+            
+            h2 {
+                font-family: 'Noto Sans', sans-serif;
+                color: white;
+                margin-top: 10px;
+                font-size: 1.9rem;
+                line-height: 2.7rem;
+            }
 
-        p {
-            font-family: 'Noto Sans', sans-serif;
-            color: white;
-            margin-top: 20px;
-            font-size: 1.1rem;
-            line-height: 1.7rem;
-            font-weight: 400;
-        }
-    }
-
-    .namevectors {
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-
-        >svg {
-            transform: scale(.9);
-            margin-left: -30px;
+            p {
+                font-family: 'Noto Sans', sans-serif;
+                color: white;
+                margin-top: 20px;
+                font-size: 1.1rem;
+                line-height: 1.7rem;
+                font-weight: 400;
+            }
         }
 
-        .nameicons {
+        .namevectors {
+            width: 100%;
+            height: auto;
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            flex-direction: column;
-            max-width: 96px;
-            max-height: 70vh;
-            margin-top: 65px;
+            position: relative;
+
+            >svg {
+                transform: scale(.9);
+                margin-left: -30px;
+            }
+
+            .nameicons {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+                max-width: 96px;
+                max-height: 70vh;
+                margin-top: 65px;
+            }
+        }
+    }
+}
+
+@media (min-width:430px) {
+    .namesection {
+        .namevectors {
+            justify-content: center;
+
+            .nameicons {
+                margin-top: 30px;
+            }
         }
     }
 }
