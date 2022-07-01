@@ -4,9 +4,9 @@ export default function Organized() {
     return (
         <section className={styles.organized}>
             <p> 
-                Well-organized person,<br/>
-                problem solver, independent <br/>
-                employee with high atention <br/>
+                Well-organized person,
+                problem solver, independent 
+                employee with high atention 
                 to details.
             </p>
             <div className={styles.bgImg}>
