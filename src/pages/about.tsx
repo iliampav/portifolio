@@ -20,6 +20,7 @@ return (
     </Head>
 
     <Name />
+    <Name />
     <Experience />
     <Organized />
     <AwesomeTools />
