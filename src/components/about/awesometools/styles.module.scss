@@ -1,69 +1,101 @@
 @import '/src/styles/variables.scss';
 
-.toolssection {
-    background-color: $marine-blue;
-    min-height: 100vh;
-    padding: 20px;
-    padding-bottom: 0;
-
-    .toolstxt {
-
-        h1 {
-            color: white;
-            font-size: 3rem;
-            font-family: 'Noto Sans', sans-serif;
-            font-weight: 700;
-            margin-top: 1%;
+@media (min-width:0px) {
+    .toolssection {
+        background-color: $marine-blue;
+        min-height: 100vh;
+        padding: 20px;
+        padding-bottom: 0;
+    
+        .toolstxt {
+    
+            h1 {
+                color: white;
+                font-size: 3rem;
+                font-family: 'Noto Sans', sans-serif;
+                font-weight: 700;
+                margin-top: 1%;
+            }
+            
+            h2 {
+                font-family: 'Noto Sans', sans-serif;
+                color: white;
+                margin-top: 10px;
+                font-size: 1.9rem;
+                line-height: 2.7rem;
+            }
+    
+            p {
+                font-family: 'Noto Sans', sans-serif;
+                color: white;
+                margin-top: 20px;
+                font-size: 1.1rem;
+                line-height: 1.7rem;
+                font-weight: 400;
+            }
         }
-        
-        h2 {
-            font-family: 'Noto Sans', sans-serif;
-            color: white;
-            margin-top: 10px;
-            font-size: 1.9rem;
-            line-height: 2.7rem;
-        }
-
-        p {
-            font-family: 'Noto Sans', sans-serif;
-            color: white;
+    
+        .toolsvectors {
+            width: 100vw;
+            margin-left: -20px;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            flex-wrap: wrap;
             margin-top: 20px;
-            font-size: 1.1rem;
-            line-height: 1.7rem;
-            font-weight: 400;
+    
+            >div {
+                
+                width: 50%;
+                height: 100%;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                max-height: calc(100% / 7);
+                height: 30vw;
+                min-height: 16vh;
+                position: relative;
+                filter: grayscale(1);
+                transition: filter .3s ease-in-out;
+    
+                &:hover {
+                    filter: grayscale(0);
+                    transition: filter .3s ease-in-out;
+                }
+    
+                img {
+                    object-fit: cover;
+                }
+            }
         }
     }
+}
 
-    .toolsvectors {
-        width: 100vw;
-        margin-left: -20px;
-        height: auto;
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        flex-wrap: wrap;
-        margin-top: 20px;
-
-        >div {
-            
-            width: 50%;
-            height: 100%;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            max-height: calc(100% / 7);
-            height: 16vh;
-            position: relative;
-            filter: grayscale(1);
-            transition: filter .3s ease-in-out;
-
-            &:hover {
-                filter: grayscale(0);
-                transition: filter .3s ease-in-out;
+@media (min-width:600px) {
+    .toolssection {
+        .toolsvectors {
+            >div{
+                width: 33.3%;
             }
 
-            img {
-                object-fit: cover;
+            >div:nth-child(2), >div:nth-child(9){
+                width: 66.7%;
+            }
+        }
+    }
+}
+
+@media (min-width:800px) {
+    .toolssection {
+        .toolsvectors {
+            >div{
+                width: 25%;
+                height: 24vw;
+            }
+
+            >div:nth-child(2), >div:nth-child(9){
+                width: 50%;
             }
         }
     }
