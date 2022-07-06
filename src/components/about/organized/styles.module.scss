@@ -22,21 +22,103 @@
             font-weight: 400;
         }
     
-        div {
-            background-image: url(../../../../public/assets/img/about/organizedimg.svg);
+        .organizedBox {
             height: 73%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: top center;
             width: 100vw;
-            max-width: 350px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .bigScreenLeft {
+                display: none;
+            }
+
+            .bigScreenRight {
+                display: none;
+            }
+
+            div {
+                background-image: url(../../../../public/assets/img/about/organizedimg.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: top center;
+                max-width: 370px;
+                width: 370px;
+                height: 100%;
+            }
         }
     }
 }
 
-@media (min-width: 630px) {
+@media (min-width: 850px) {
     .organized {
         align-items: flex-start;
+
+        .organizedBox {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+
+            >div {
+                width: 30%;
+            }
+
+            >div:nth-child(2) {
+                min-width: 370px;
+            }
+    
+            .bigScreenLeft {
+                display: block;
+                background-image: unset;
+                position: relative;
+
+                svg:first-of-type {
+                    display: block;
+                    margin-top: 90%;
+                }
+
+                svg:nth-child(2) {
+                    position: absolute;
+                    left: 50%;
+                    top: 60%;
+                }
+
+                svg:nth-child(3) {
+                    position: absolute;
+                    left: 10%;
+                    top: 80%;
+                }
+            }
+    
+            .bigScreenRight {
+                display: block;
+                background-image: unset;
+                position: relative;
+
+                svg:first-of-type {
+                    display: block;
+                    margin-top: 30%;
+                }
+
+                svg:nth-child(2) {
+                    position: absolute;
+                    left: 50%;
+                    top: 30%;
+                }
+
+                svg:nth-child(3) {
+                    position: absolute;
+                    left: 60%;
+                    top: 0%;
+                }
+            }
+
+            .bgImg {
+                width: 40%;
+            }
+
+        }
         
     }
 }
