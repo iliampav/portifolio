@@ -1,80 +1,192 @@
 
 @import '/src/styles/variables.scss';
 
-.principles {
-    background-color: $yellow;
-    min-height: 100vh;
-    padding: 20px;
-    padding-top: 10px;
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-
-    h1 {
-        color: white;
-        font-size: 4.5rem;
-        font-family: 'Noto Sans', sans-serif;
-        font-weight: 700;
-        margin-top: 1%;
-        line-height: 4.5rem;
-    }
-
-    h2 {
-        color: white;
-        font-size: 2.9rem;
-        font-family: 'Noto Sans', sans-serif;
-        font-weight: 400;
-        margin-top: 1%;
-        margin-bottom: 30px;
-    }
-    
-    p {
-        font-family: 'Noto Sans', sans-serif;
-        color: white;
-        margin-top: 20px;
-        font-size: 1.5rem;
-        line-height: 2rem;
-        font-weight: 400;
-    }
-
-    .principlesbox {
+@media (min-width:0px) {
+    .principles {
+        background-color: $yellow;
+        min-height: 100vh;
+        padding: 20px;
+        padding-top: 10px;
+        position: relative;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         flex-direction: column;
-        border: 2px solid $marine-blue;
-        min-height: 180px;
-        margin-bottom: 15px;
-
-        >div:last-of-type {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
+    
+        h1 {
+            color: white;
+            font-size: 4.5rem;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 700;
+            margin-top: 1%;
+            line-height: 4.5rem;
             width: 100%;
-            height: 100%;
-            padding: 10px;
+            text-align: center;
+        }
+    
+        h2 {
+            color: white;
+            font-size: 2.9rem;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 400;
+            margin-top: 1%;
+            margin-bottom: 30px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        p {
+            font-family: 'Noto Sans', sans-serif;
+            color: white;
+            margin-top: 20px;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-weight: 400;
+        }
+    
+        .principlesbox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            border: 2px solid $marine-blue;
+            min-height: 180px;
+            max-height: 180px;
+            width: 100%;
+            margin-bottom: 15px;
 
-            h4 {
-                color: $marine-blue;
-                font-size: 1.4rem;
-                font-family: 'Noto Sans', sans-serif;
-                margin-left: 5px;
+            .clients {
+                display: none;
             }
 
-            svg {
-                margin-right: 10px;
-                width: 25%;
+            .always {
+                display: none;
+            }
+
+            .webflow {
+                display: none;
+            }
+    
+            >div:last-of-type {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                padding: 10px;
+                background-color: $yellow;
+                z-index: 10;
+    
+                h4 {
+                    color: $marine-blue;
+                    font-size: 1.4rem;
+                    font-family: 'Noto Sans', sans-serif;
+                    margin-left: 5px;
+                }
+    
+                svg {
+                    margin-right: 10px;
+                    width: 25%;
+                }
+            }
+    
+            p {
+                font-size: .8rem;
+                background-color: $marine-blue;
+                padding: 8px 10px;
+                line-height: 1.1rem;
+                margin-top: unset;
+                width: 100%;
             }
         }
 
-        p {
-            font-size: .8rem;
-            background-color: $marine-blue;
-            padding: 10px;
-            line-height: 1.1rem;
-            margin-top: unset;
+        .extraBox {
+            display: none;
+        }
+    }
+}
+
+@media (min-width:500px) {
+    .principles {
+        flex-wrap: wrap;
+        align-content: flex-start;
+        flex-direction: row;
+        justify-content: space-around;
+    
+        .principlesbox {
+            max-width: 330px;
+            width: 70%;
+            position: relative;
+            background-color: $yellow;
+
+            .clients {
+                display: block;
+                position: absolute;
+                right: -33%;
+                top: 41%;
+            }
+
+            .always {
+                display: block;
+                position: absolute;
+                right: 20%;
+                bottom: -80%;
+            }
+
+            .webflow {
+                display: block;
+                position: absolute;
+                left: 20%;
+                bottom: -80%;
+                transform: scale(-1, 1);
+            }
+        }
+
+        .extraBox {
+            display: block;
+            width: 30%;
+            border: unset;
+            background-color: transparent;
+        }
+    }
+}
+
+@media (min-width:700px) {
+    .principles {
+    
+        .principlesbox {
+            max-width: 334px;
+            position: relative;
+
+            .clients {
+                right: -63%;
+                top: 41%;
+            }
+
+            .always {
+                right: 51%;
+                bottom: -80%;
+            }
+
+            .webflow {
+                left: 51%;
+                bottom: -80%;
+            }
+        }
+    }
+}
+
+@media (min-width:860px) {
+    .principles {
+    
+        .principlesbox {
+            max-width: 450px;
+            position: relative;
+
+            .clients {
+                right: -47%;
+                top: 41%;
+            }
         }
     }
 }
