@@ -39,6 +39,27 @@
                     list-style-type: none;
                 }
             }
+
+            > div {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 30px;
+
+                h3, button {
+                    width: 30%;
+                    height: auto;
+                    background-color: $yellow;
+                    color: $marine-blue;
+                    border-radius: 15px;
+                    text-align: center;
+                    padding: 5px;
+                    font-family: "Noto Sans", sans-serif;
+                    font-size: 15px;
+                }
+            }
         }
     
         >p {
@@ -96,6 +117,21 @@
 
                     .dropdownContent {
                         display: block;
+                    }
+                }
+
+                input {
+                    margin-top: 5px;
+                    border: 2px solid white;
+                    background-color: transparent;
+                    border-radius: 10px;
+                    padding: 10px 12px;
+                    font-size: 1.2rem;
+                    font-family: 'Noto Sans', sans-serif;
+                    color: white;
+    
+                    &::placeholder {
+                        color: $placeholder-color;
                     }
                 }
             }

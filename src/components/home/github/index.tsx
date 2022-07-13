@@ -229,7 +229,7 @@ export default function Github() {
                                 return <GitBox key={repository.name} {...repository} />
                             })
                             :
-                            <h1 id="fillTheGap">Loading data or no data</h1>  
+                            <h1 id="fillTheGap">No data</h1>  
                         }                    
                     </ul>
                     {

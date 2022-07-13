@@ -16,21 +16,27 @@ let tlConfig: GSAPTimelineVars = {
 
 export default function Projects() {
 
-
-    // Bannner projects carroussel
-    const slider = useRef(null)
-
     // zoom functions
+    
+    const bannerContainer = useRef<HTMLHeadingElement>(null)
+
+    const zoomAnimation = gsap.timeline(tlConfig).pause()
+
+    useEffect(() => {
+              zoomAnimation.to(bannerContainer.current, { scale: 1.2, width: '-=18%', height: '+=10%'})
+    }, []);
+
     const zoomIn = (e:React.MouseEvent<HTMLElement>) => {
         e.preventDefault()
-        
-        gsap.to(e.currentTarget, { scale: 1.2, width: '-=35%', height: '+=20%'})
+        zoomAnimation.play()
+        // gsap.to(e.currentTarget, { scale: 1.2, width: '-=35%', height: '+=20%',overwrite: 'auto'})
     }
 
     const zoomOut = (e:React.MouseEvent<HTMLElement>) => {
         e.preventDefault()
+        zoomAnimation.reverse()
+        // gsap.to(e.currentTarget, {scale: 1.0, width: '+=35%', height: '-=20%', overwrite: 'auto' })
         
-        gsap.to(e.currentTarget, {scale: 1.0, width: '+=35%', height: '-=20%' })
     }
 
     //carroussel functions
@@ -57,7 +63,6 @@ export default function Projects() {
 
         switch(bannerPostion) {
             case 'center':
-                console.log(bannerCenter)
                 break;
             case 'left':
                 leftBanner.play()
@@ -82,10 +87,9 @@ export default function Projects() {
 
     return (
         <section className={styles.projectsContainer}>
-            <div className={styles.projectsSection}
+            <div ref={bannerContainer} className={styles.projectsSection}
                 onMouseEnter={zoomIn}
                 onMouseLeave={zoomOut}
-                ref={slider}
             >
             <a 
                 className={styles.active}

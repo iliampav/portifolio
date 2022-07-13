@@ -21,7 +21,7 @@ export default function gitBox(props:Repository) {
 
     return(
         <li className={styles.repoBox}>
-            <h2>{props.name}</h2>
+            <h2>{props.name.substring(0, 20)}...</h2>
             <div className={styles.language}>
                 <div className={styles[languageStyle]}></div>
                 <p>{props.language}</p>
