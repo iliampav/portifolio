@@ -51,7 +51,7 @@ export default function Principles() {
                     When we learn from mistakes, better projects are ahead.
                 </p>
                 <svg className={styles.always} width="181" height="134" viewBox="0 0 181 134" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 131.5C61.1667 133.5 179.5 110.4 179.5 2" stroke="#01375E" stroke-width="3" stroke-linecap="round" strokeDasharray="15 15"/>
+                    <path d="M2 131.5C61.1667 133.5 179.5 110.4 179.5 2" stroke="#01375E" strokeWidth="3" strokeLinecap="round" strokeDasharray="15 15"/>
                 </svg>
             </div>
             <div className={styles.principlesbox}>
@@ -71,7 +71,7 @@ export default function Principles() {
                     Research, refine, rebuild and test. I like to repeat this move until I get closer to “simplicity”
                 </p>
                 <svg className={styles.webflow} width="181" height="134" viewBox="0 0 181 134" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 131.5C61.1667 133.5 179.5 110.4 179.5 2" stroke="#01375E" stroke-width="3" stroke-linecap="round" strokeDasharray="15 15"/>
+                    <path d="M2 131.5C61.1667 133.5 179.5 110.4 179.5 2" stroke="#01375E" strokeWidth="3" strokeLinecap="round" strokeDasharray="15 15"/>
                 </svg>
             </div>
             <div className={`${styles.principlesbox} ${styles.extraBox}`}></div>

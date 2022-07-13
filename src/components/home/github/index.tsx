@@ -240,7 +240,7 @@ export default function Github() {
                                 </button>
                             </div>
                             :
-                            <div><h3>That's all repositories</h3></div>
+                            <div><h3>That&apos;s all repositories</h3></div>
                             
                     }
 
