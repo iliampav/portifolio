@@ -9,6 +9,12 @@ interface Repository {
     archived: boolean;
     mirror_url?: boolean;
     language: 'string';
+    clone_url: 'string';
+    html_url: 'string';
+    owner: {
+        login: 'string';
+    };
+    default_branch: 'string';
 }
 
 interface SortItens {
@@ -18,13 +24,14 @@ interface SortItens {
 }
 
 export default function Github() {
-    const  userName = "iliampav"
+    const [userName, setUserName] = useState("iliampav")
     const [repositories, setRepositories] = useState([]);
     const [filters, setFilters] = useState([])
     const [input, setInput] = useState('')
     const [type, setType] = useState('')
     const [language, setLanguage] = useState('')
     const [reSorted, setReSorted] = useState('')
+    const [repoSize, setRepoSize] = useState(9)
 
     //load from api        
 
@@ -36,6 +43,19 @@ export default function Github() {
             setFilters(data)
         })
     }, []);
+
+    // user change
+
+    useEffect(() => {
+
+        fetch(`https://api.github.com/users/${userName}/repos`)
+        .then(response => response.json())
+        .then(data => {
+            setRepositories(data)
+            setFilters(data)
+        })
+                      
+    }, [userName]);
 
     // input change
 
@@ -145,6 +165,17 @@ export default function Github() {
 
     }, [reSorted]);
 
+    // see more button
+
+
+    const seeMore = () => {
+        setRepoSize(repoSize + 9)
+    }; 
+
+    useEffect(() => {    
+
+    }, [repoSize]);
+
     return (
         <section className={styles.githubSection}>
             <svg width="62" height="60" viewBox="0 0 62 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -156,8 +187,8 @@ export default function Github() {
                 </h1>
                 {/* filters */}
                 <div className={styles.dropdownSelect}>
-                    <input type="text" placeholder='Find a repository..' onChange={onChangeInput}/>
-                    <input type="text" placeholder='Change user repos' onChange={onChangeInput}/>
+                    <input type="text" placeholder='Search a repository' onChange={onChangeInput}/>
+                    <input type="text" placeholder='Change user repository (git user)' onKeyDown={(e) => e.key === 'Enter' ? setUserName((e.target as HTMLInputElement).value) : null}/>
                     <div id="selectors" className={styles.selectors}>
                     <div className={styles.dropdown}>
                         <button className={styles.dropbtn}>Type</button>
@@ -191,16 +222,27 @@ export default function Github() {
                 {/* dynamic boxes */}
                 <div className={styles.gitBoxContainer}>
 
-                <ul>
+                    <ul>
+                        {
+                            filters.length ?
+                            filters.slice(0, repoSize).map((repository:Repository) => {
+                                return <GitBox key={repository.name} {...repository} />
+                            })
+                            :
+                            <h1 id="fillTheGap">Loading data or no data</h1>  
+                        }                    
+                    </ul>
                     {
-                        filters.length ?
-                        filters.map((repository:Repository) => {
-                            return <GitBox key={repository.name} {...repository} />
-                        })
-                        :
-                        <h1 id="fillTheGap">Loading data or no data</h1>  
-                    }                    
-                </ul>
+                        filters.length > repoSize ?
+                            <div>
+                                <button onClick={seeMore}>
+                                    Show more
+                                </button>
+                            </div>
+                            :
+                            <div><h3>That's all repositories</h3></div>
+                            
+                    }
 
                 </div>
                 <p>

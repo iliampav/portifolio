@@ -97,9 +97,8 @@ export default function Projects() {
                     <Image
                         src={itxPic}
                         alt="Picture of the author"
-                        width="100%"
-                        height="100%"
                         layout="fill" 
+                        priority={true}
                     />
                 </a>
                 <a id='signatureImg' className={styles.left}
@@ -112,8 +111,6 @@ export default function Projects() {
                         src={signatureImg}
                         alt="Picture of the author"
                         className={styles.imagecontainer}
-                        width="100%"
-                        height="100%"
                         layout="fill" 
                     />
                 </a>
@@ -126,8 +123,6 @@ export default function Projects() {
                     <Image
                         src={tincoimg}
                         alt="Picture of the author"
-                        width="100%"
-                        height="100%"
                         layout="fill" 
                     />
                 </a>
@@ -139,8 +134,6 @@ export default function Projects() {
                     <Image
                         src={yahcafeimg}
                         alt="Picture of the author"
-                        width="100%"
-                        height="100%"
                         layout="fill" 
                     />
                 </a>
