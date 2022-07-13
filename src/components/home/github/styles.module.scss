@@ -15,80 +15,17 @@
         width: 60%;
         height: auto;
         opacity: .1;
+        z-index: 1;
     }
 
     .container {
+        z-index: 2;
 
         .gitBoxContainer {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-    
-            .repoBox {
-                border: solid 1px $yellow;
-                border-radius: 10px;
-                padding: 15px 10px 10px;
-                margin-top: 20px;
-                width: 100%;
-        
-                h2 {
-                    color: white;
-                    font-family: 'Noto Sans', sans-serif;
-                    margin-bottom: 10px;
-                }
-        
-                .language {
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: center;
-        
-                    p {
-                        color: white;
-                        font-family: 'Noto Sans', sans-serif;
-                    }
-        
-                    >div {
-                        width: 10px;
-                        height: 10px;
-                        border-radius: 50%;
-                        margin-right: 8px;
-        
-                        &.javascript {
-                            background-color: yellow;
-                        }
-        
-                        &.typescript {
-                            background-color: rgb(0, 170, 255);
-                        }
-                    }
-                }
-        
-                .gitBtn {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-        
-                    >a {
-                        background-color: $yellow;
-                        width: 32.3%;
-                        border-radius: 10px;
-                        padding: 15px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: column;
-                        margin-top: 15px;
-                        cursor: pointer;
-        
-                        p {
-                            font-family: "Noto Sans", sans-serif;
-                            font-size: .9rem;
-                            margin-top: 10px;
-                        }
-                    }
-                }
-            }
         }
     
         >p {
@@ -112,8 +49,107 @@
             font-family: 'Noto Sans', sans-serif;
         }
 
+        .dropdownSelect  {
+            display: flex;
+            padding: 16px 0px;
+
+            .dropbtn {
+                align-items: center;
+                background-color: #fff;
+                border: 1px solid lightgrey;
+                border-radius: 6px;
+                box-shadow: rgba(27, 31, 35, 0.04); 
+                color: gray;
+                cursor: pointer;
+                display: flex;        
+                font-size: 16px;
+                justify-content: center;
+                padding: 6px 12px;
+                transition-duration: 0.4s
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+                justify-content: left;
+                cursor: pointer;
+                margin-right: 4px;
+
+                &:hover {
+
+                    .dropbtn {
+                        background-color: lightcyan;
+                    }
+
+                    .dropdownContent {
+                        display: block;
+                    }
+                }
+            }
+
+            .dropdownContent {
+                border-radius: 5%;
+                right: 1px;
+                left: auto;
+                background-color: #f9f9f9;
+                border: 1px solid lightgray;
+                border-color: lightgray;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+                display: none;
+                font-size: 12px;
+                position: absolute;
+                width: 266px;
+                z-index: 1;
+            
+                a {
+                    align-items: center;
+                    border: 0.2px solid lightcyan;
+                    color: black;
+                    display: block;
+                    padding: 12px 16px;
+                    text-align: left;
+                    text-decoration: none;
+                    transition-duration: 0.4s;        
+                    transition-timing-function: ease-in-out;
+
+                    &:hover {
+                        background-color: #f1f1f1;
+                        transition-duration: 0.4s;
+                        transition-timing-function: ease-in-out;
+                    }
+                }
+
+            }
+
+            .selectors {
+                align-items: center;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            input {
+                background-color: #fff;
+                border: 1px solid lightgray;
+                border-radius: 6px;
+                color: gray;
+                line-height: 20px;
+                font-size: 14px;
+                margin-right: 12px;
+                outline: blue;
+                padding: 5px 12px;
+                vertical-align: middle;
+                width: 100%;
+
+                &:focus {
+                    border-color: blue;
+                    box-shadow: 0 0 0 0.2em lightblue;
+                    outline: none;
+                }
+            }
+        }
     }
 }
+
 @media (min-width: 700px) {
     .githubSection {
 
