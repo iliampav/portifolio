@@ -13,7 +13,7 @@ export default function Teamwork() {
                 Get in touch via the form below, 
                 or by emailing  
             </p>
-            <h3>hello@pavko.com.br</h3>
+            <h3>iliamfer@hotmail.com</h3>
         </section>
     )
 }
