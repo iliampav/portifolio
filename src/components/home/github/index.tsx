@@ -6,6 +6,7 @@ import GitBox from './gitbox-container'
 interface Repository {
     name: 'string'; 
     fork: boolean;
+    forks_count: number;
     archived: boolean;
     mirror_url?: boolean;
     language: 'string';
@@ -15,6 +16,7 @@ interface Repository {
         login: 'string';
     };
     default_branch: 'string';
+    stargazers_count: number;
 }
 
 interface SortItens {
@@ -33,14 +35,22 @@ export default function Github() {
     const [reSorted, setReSorted] = useState('')
     const [repoSize, setRepoSize] = useState(9)
 
+    let hasContent = filters.length !== undefined
+
     //load from api        
 
     useEffect(() => {
         fetch(`https://api.github.com/users/${userName}/repos`)
         .then(response => response.json())
         .then(data => {
-            setRepositories(data)
-            setFilters(data)
+            if(!data.message) {
+                setRepositories(data)
+                setFilters(data)
+            } else  {
+                setRepositories([])
+                setFilters([])
+            }
+            
         })
     }, []);
 
@@ -78,30 +88,41 @@ export default function Github() {
     // on change Type
 
     const onChangeType = (value: string) => {
+
         setType(value)
     }; 
 
     useEffect(() => {
         
         const typeData = repositories.filter((repository:Repository) => {
-            if (type === 'all') {
-                return true
-            } else if (type === 'source') {
-                if(repository.fork === false) {
+            switch(type) {
+                case 'source' :
+                    if(repository.fork === false) {
+                        return true
+                    }
+
+                    break
+
+                case 'forks' :
+                    if(repository.fork === true) {
+                        return true
+                    } 
+                    break
+                
+                case 'archived' :
+                    if(repository.archived === true) {
+                        return true
+                    } 
+                    break
+
+                case 'mirrors' :
+                    if(repository.mirror_url === true) {
+                        return true
+                    }
+                    break
+                    
+                default : 
                     return true
-                }
-            } else if (type === 'forks') {
-                if(repository.fork === true) {
-                    return true
-                }    
-            } else if (type === 'archived') {
-                if(repository.archived === true) {
-                    return true
-                } 
-            } else if (type === 'mirrors') {
-                if(repository.mirror_url === true) {
-                    return true
-                }        
             }
             
         })
@@ -113,9 +134,11 @@ export default function Github() {
     const menuLanguageCaller = () => {
         let names: string[] = []
 
-        repositories.map((repository:Repository) => {     
-            names.push(repository.language)     
-        })
+        if(hasContent) {
+            repositories.map((repository:Repository) => {     
+                names.push(repository.language)     
+            })
+        }
 
         const uniqueName = names.filter((elem, index, self) => {
             if (elem !== null) {
@@ -195,7 +218,7 @@ export default function Github() {
                         <div className={styles.dropdownContent} >
                             <a onClick={() => onChangeType('all')}>All</a>
                             <a onClick={() => onChangeType('source')}>Sources</a>
-                            <a onClick={() => onChangeType('forks')}>Forks</a>
+                            <a onClick={() => onChangeType('forks')}>Forked</a>
                             <a onClick={() => onChangeType('archived')}>Archived</a>
                             <a onClick={() => onChangeType('mirrors')}>Mirrors</a>
                         </div>
@@ -211,9 +234,9 @@ export default function Github() {
                     <div className={styles.dropdown}>
                         <button className={styles.dropbtn}>Sort</button>
                         <div className={styles.dropdownContent} >
+                            <a onClick={() => onSortBy('alphabeticOrder')}>Alphabetic order</a>
                             <a onClick={() => onSortBy('lastUpdated')}>Last Updated</a>
                             <a onClick={() => onSortBy('stars')}>Stars</a>
-                            <a onClick={() => onSortBy('alphabeticOrder')}>Alphabetic order</a>
                         </div>
                     </div>
                 </div>
@@ -224,7 +247,7 @@ export default function Github() {
 
                     <ul>
                         {
-                            filters.length ?
+                            hasContent ?
                             filters.slice(0, repoSize).map((repository:Repository) => {
                                 return <GitBox key={repository.name} {...repository} />
                             })
@@ -249,7 +272,7 @@ export default function Github() {
                     Get in touch via the form below, 
                     or by emailing  
                 </p>
-                <h3>hello@pavko.com.br</h3>
+                <h3>iliamfer@hotmail.com</h3>
             </div>
         </section>
     )

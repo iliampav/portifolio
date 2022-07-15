@@ -1,5 +1,6 @@
+
+
 import Head from 'next/head'
-import Link from 'next/link'
 import type { NextPage } from 'next'
 import Name from 'src/components/about/name'
 import Experience from 'src/components/about/somexp'
@@ -9,6 +10,8 @@ import Teamwork from 'src/components/about/teamwork'
 import Principles from 'src/components/about/principles'
 import Footer from 'src/components/footer'
 import AboutHelp from 'src/components/about/abouthelp'
+
+import styles from './tempfile.module.scss'
 
 const Home: NextPage = () => {
 return (
@@ -27,6 +30,12 @@ return (
     <Principles />
     <AboutHelp />
     <Footer />
+
+    <div className={styles.notResponsiveYet}>
+      <h1>Sorry, this page isn't responsive yet</h1>
+      <h1>But you can see it in any mobile!</h1>
+      <a href="/">Back to home</a>
+    </div>
   </>
   )
 }

@@ -1,0 +1,35 @@
+@import '/src/styles/variables.scss';
+
+@media (min-width:1000px) {
+    .notResponsiveYet {
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background-color: $marine-blue;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        a {
+            padding: 20px;
+            background-color: $yellow;
+            color: $marine-blue;
+            font-weight: 600;
+            font-size: 1.5rem;
+            border-radius: 30px;
+            font-family: 'Noto Sans', sans-serif;
+            margin-top: 30px;
+        }
+
+        h1  {
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+    }
+}
