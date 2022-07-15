@@ -29,14 +29,11 @@ export default function Projects() {
     const zoomIn = (e:React.MouseEvent<HTMLElement>) => {
         e.preventDefault()
         zoomAnimation.play()
-        // gsap.to(e.currentTarget, { scale: 1.2, width: '-=35%', height: '+=20%',overwrite: 'auto'})
     }
 
     const zoomOut = (e:React.MouseEvent<HTMLElement>) => {
         e.preventDefault()
         zoomAnimation.reverse()
-        // gsap.to(e.currentTarget, {scale: 1.0, width: '+=35%', height: '-=20%', overwrite: 'auto' })
-        
     }
 
     //carroussel functions

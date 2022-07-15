@@ -34,8 +34,9 @@ export default function Github() {
     const [language, setLanguage] = useState('')
     const [reSorted, setReSorted] = useState('')
     const [repoSize, setRepoSize] = useState(9)
+    const [noUser, setNoUser] = useState('')
 
-    let hasContent = filters.length !== undefined
+    let hasContent = filters.length !== undefined && filters.length !== 0
 
     //load from api        
 
@@ -44,9 +45,11 @@ export default function Github() {
         .then(response => response.json())
         .then(data => {
             if(!data.message) {
+                setNoUser('No data whith this filter')
                 setRepositories(data)
                 setFilters(data)
             } else  {
+                setNoUser('No user found whith this git username')
                 setRepositories([])
                 setFilters([])
             }
@@ -185,7 +188,8 @@ export default function Github() {
     useEffect(() => {    
 
     }, [repoSize]);
-
+    console.log(hasContent)
+    console.log(filters.length)
     return (
         <section className={styles.githubSection}>
             <svg width="62" height="60" viewBox="0 0 62 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -239,7 +243,7 @@ export default function Github() {
                                 return <GitBox key={repository.name} {...repository} />
                             })
                             :
-                            <h1 id="fillTheGap">No data</h1>  
+                            <h1>{noUser}</h1>  
                         }                    
                     </ul>
                     {
