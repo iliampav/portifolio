@@ -52,19 +52,6 @@ export default function Github() {
             }
             
         })
-    }, []);
-
-    // user change
-
-    useEffect(() => {
-
-        fetch(`https://api.github.com/users/${userName}/repos`)
-        .then(response => response.json())
-        .then(data => {
-            setRepositories(data)
-            setFilters(data)
-        })
-                      
     }, [userName]);
 
     // input change
