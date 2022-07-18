@@ -136,6 +136,7 @@
     
         .pavkoLogo {
             transform: scale(1.5);
+            bottom: 16%;
         }
     }
 
@@ -245,6 +246,23 @@
             transform: scaleX(2.6);
             left: 30%;
         }
+
+        .animationborder {
+            .boatwaves {
+                transform: scaleX(2);
+                top: -10%;
+                left: 24%;
+            }
+            .cruzePosition {
+                transform: rotate(-55deg) scale(2.2);
+                left: 41%;
+                top: -52px;
+            }
+
+            .pavkoLogo {
+                bottom: 15%;
+            }
+        }
     }
 
     .boat {
@@ -272,6 +290,10 @@
                 transform: rotate(-55deg) scale(2.2);
                 left: 41%;
                 top: -52px;
+            }
+
+            .pavkoLogo {
+                bottom: 15%;
             }
         }
 
