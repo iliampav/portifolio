@@ -12,6 +12,17 @@
         justify-content: space-around;
         align-items: center;
         flex-direction: column;
+
+
+
+        .organizedcontainer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
         
         p {
             font-family: 'Noto Sans', sans-serif;
@@ -28,6 +39,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
+            min-height: 588px;
 
             .bigScreenLeft {
                 display: none;
@@ -42,8 +54,8 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: top center;
-                max-width: 370px;
-                width: 370px;
+                max-width: 450px;
+                width: 450px;
                 height: 100%;
             }
         }
@@ -55,10 +67,8 @@
         align-items: flex-start;
 
         .organizedBox {
-            display: flex;
             justify-content: flex-start;
-            align-items: center;
-
+            margin-left: -150px;
 
             >div {
                 width: 30%;
@@ -120,5 +130,29 @@
 
         }
         
+    }
+}
+
+@media (min-width: 1440px ) {
+    .organized  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .organizedcontainer  {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-direction: column;
+            max-width: 1000px;
+            height: 100%;
+
+            .organizedBox {
+
+                >div:nth-child(2) {
+                    min-width: 465px;
+                }
+            }
+        }    
     }
 }

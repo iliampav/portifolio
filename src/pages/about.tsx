@@ -32,13 +32,13 @@ return (
     <AboutHelp />
     <Footer />
 
-    <div className={styles.notResponsiveYet}>
+    {/* <div className={styles.notResponsiveYet}>
       <h1>Sorry, this page isn&apos;t responsive yet</h1>
       <h1>But you can see it in any mobile!</h1>
       <Link href="/">
         <a>Back to home</a>
       </Link>
-    </div>
+    </div> */}
   </>
   )
 }

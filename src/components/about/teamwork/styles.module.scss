@@ -10,6 +10,15 @@
         align-items: center;
         flex-direction: column;
 
+        .teamworkcontainer  {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            max-width: 1000px;
+            height: 100%;
+        }
+
         .title {
             position: relative;
             width: 100%;
@@ -103,4 +112,13 @@
             }
         }
     }  
+}
+
+@media (min-width:1000px) {
+    .teamwork {
+
+        svg  {
+            transform: scale(1.5);
+        }
+    }
 }

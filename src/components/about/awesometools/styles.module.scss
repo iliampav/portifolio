@@ -6,6 +6,18 @@
         min-height: 100vh;
         padding: 20px;
         padding-bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .toolscontainer  {
+            max-width: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
     
         .toolstxt {
     
@@ -98,5 +110,17 @@
                 width: 50%;
             }
         }
+    }
+}
+
+@media (min-width:1000px) {
+    .toolssection {
+        .toolsvectors {
+            width: 100%;
+
+            >div{
+                height: 203px;
+            }
+        }    
     }
 }

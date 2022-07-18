@@ -12,6 +12,17 @@
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
+
+        .experienceContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+            max-width: 1000px;
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
         
         p {
             font-family: 'Noto Sans', sans-serif;
@@ -22,13 +33,14 @@
             font-weight: 400;
         }
     
-        div {
+        .bgImg {
             background-image: url(../../../../public/assets/img/about/experienceimg.svg);
             height: 73%;
             background-repeat: no-repeat;
             background-size: cover;
             background-position: top center;
             width: 100vw;
+            margin-left: -20px;
         }
 
         .reacticon {
@@ -122,6 +134,25 @@
             background-image: unset;
             top: 34%;
             left: 20%;
+        }
+    }
+}
+
+@media (min-width:1200px) {
+    .experience {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .experienceContainer {
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        .bgImg {
+            height: 100%;
+            width: 600px;
         }
     }
 }
