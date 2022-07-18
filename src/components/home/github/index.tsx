@@ -188,8 +188,6 @@ export default function Github() {
     useEffect(() => {    
 
     }, [repoSize]);
-    console.log(hasContent)
-    console.log(filters.length)
     return (
         <section className={styles.githubSection}>
             <svg width="62" height="60" viewBox="0 0 62 60" fill="none" xmlns="http://www.w3.org/2000/svg">
