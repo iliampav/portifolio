@@ -1,6 +1,6 @@
 
 
-export default function sailBanner({setRef, className}) {
+export default function sailBanner({ className}) {
     return (
         <svg ref={setRef} className={className} width="358" height="572" viewBox="0 0 358 572" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clipPath="url(#clip0_256_1772)">
