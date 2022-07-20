@@ -132,6 +132,7 @@
         .cruzePosition {
             transform: rotate(-46deg) scale(1.5);
             left: 41%;
+            top: -3%;
         }
     
         .pavkoLogo {
@@ -189,7 +190,7 @@
         }
     
         .cruzePosition {
-            transform: rotate(-46deg) scale(2.2);
+            transform: rotate(-56deg) scale(1.9);
             left: 41%;
         }
     
@@ -199,8 +200,7 @@
     }
 
     .wavesBeach {
-        top: -20%;
-        transform: scaleX(2.2) scaleY(1.5);
+        opacity: 0;
     }
 
     .sailBirds {
@@ -221,14 +221,14 @@
     }
 
     .boat {
-        left: 15%;
-        top: 40%;
-        transform: scale(2.8) rotate(-25deg);
+        left: 19%;
+        top: 30%;
+        transform: scale(2.8) rotate(-35deg);
     }
 
     .boatsmall {
         left: 33%;
-        top: 50%;
+        top: 30%;
         transform: scale(2.5) rotate(0deg);
     }
 
@@ -246,22 +246,14 @@
             transform: scaleX(2.6);
             left: 30%;
         }
+        .cruzePosition {
+            transform: rotate(-55deg) scale(2.6);
+            left: 41%;
+            top: 5%;
+        }
 
-        .animationborder {
-            .boatwaves {
-                transform: scaleX(2);
-                top: -10%;
-                left: 24%;
-            }
-            .cruzePosition {
-                transform: rotate(-55deg) scale(2.2);
-                left: 41%;
-                top: -52px;
-            }
-
-            .pavkoLogo {
-                bottom: 15%;
-            }
+        .pavkoLogo {
+            bottom: 15%;
         }
     }
 
@@ -296,10 +288,6 @@
                 bottom: 15%;
             }
         }
-
-        .wavesBeach {
-            opacity: 0;
-        }
     
         .sailBirds {
             top:-20%;
@@ -332,5 +320,14 @@
             top: 55%;
             transform: scale(1.7);
         }
+    }
+}
+
+@media (min-width: 2200px) {
+
+    .wavesBeach {
+        opacity: 1;
+        top: -30%;
+        transform: scaleX(2.6) scaleY(1.5);
     }
 }

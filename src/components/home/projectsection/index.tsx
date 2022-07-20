@@ -23,7 +23,7 @@ export default function Projects() {
     const zoomAnimation = gsap.timeline(tlConfig).pause()
 
     useEffect(() => {
-              zoomAnimation.to(bannerContainer.current, { scale: 1.2, width: '-=35%', height: '+=20%'})
+        zoomAnimation.to(bannerContainer.current, { scale: 1.2, width: '-=35%', height: '+=20%'})
     }, []);
 
     const zoomIn = (e:React.MouseEvent<HTMLElement>) => {
