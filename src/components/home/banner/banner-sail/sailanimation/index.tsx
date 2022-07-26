@@ -12,30 +12,30 @@ import styles from './styles.module.scss';
 import {gsap, Back} from 'gsap'
 import { useEffect, useRef } from 'react'
 
-// let tlConfig: GSAPTimelineVars = {
-//     paused: true
-// };
+let tlConfig: GSAPTimelineVars = {
+    paused: true
+};
 
 export default function sailAnimation() {
 
-    // const cruzeBoat = useRef<HTMLHeadingElement>(null)
+    const cruzeBoat = useRef<HTMLHeadingElement>(null)
 
-    // const cruzeTl = gsap.timeline(tlConfig).play()
+    const cruzeTl = gsap.timeline(tlConfig).play()
 
-    // useEffect(() => {
-    //     console.log(cruzeBoat.current)
-    //     cruzeTl.from(cruzeBoat.current, { left: '100%', width: '-=5%', top: "50%", duration: 50})
-    //            .to(cruzeBoat.current, { ease: Back.easeInOut.config(.7), top: "-=5px", repeat:-1, duration:1.5});
+    useEffect(() => {
+        console.log(cruzeBoat.current)
+        cruzeTl.from(cruzeBoat.current, { left: '100%', width: '-=5%', top: "50%", duration: 50})
+               .to(cruzeBoat.current, { ease: Back.easeInOut.config(.7), top: "-=5px", repeat:-1, duration:1.5});
         
-    // }, [])
+    }, [])
 
     return (
         <>
             <div className={styles.cruzeAnimation}>
                 <div className={styles.animationborder}>
                     <WaveBoat className={styles.boatwaves}/>
-                    <Cruze className={styles.cruzePosition}/>
-                    {/* <Cruze setRef={cruzeBoat} className={styles.cruzePosition}/> */}
+                    {/* <Cruze className={styles.cruzePosition}/> */}
+                    <Cruze setRef={cruzeBoat} className={styles.cruzePosition}/>
                     <PavkoLogo className={styles.pavkoLogo} />
                 </div>
             </div>
