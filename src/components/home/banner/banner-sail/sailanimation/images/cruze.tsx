@@ -13,10 +13,8 @@ export default function SailBanner() {
     const cruzeTl = gsap.timeline(tlConfig).play()
 
     useEffect(() => {
-        console.log(cruzeBoat.current)
-        cruzeTl.from(cruzeBoat.current, { left: '100%', width: '-=5%', top: "50%", duration: 50})
-               .to(cruzeBoat.current, { ease: Back.easeInOut.config(.7), top: "-=5px", repeat:-1, duration:1.5});
-        
+        cruzeTl.from(cruzeBoat.current, { left: '100%', width: '-=5%', top: "50%", duration: 1})
+               .to(cruzeBoat.current, { ease: Back.easeInOut.config(1), top: "-=10px", repeat:-1, duration:3.5, yoyo:true})
     }, [])
 
     return (
