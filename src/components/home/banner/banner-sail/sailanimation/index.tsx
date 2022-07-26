@@ -1,5 +1,5 @@
 import Cruze from './images/cruze'
-import WaveBoat from '@/public/assets/img/home/bannerimages/sail/wave1.svg'
+import WaveBoat from './images/waveboat'
 import PavkoLogo from '@/public/assets/img/home/bannerimages/sail/pavko.svg'
 import Bird from '@/public/assets/img/home/bannerimages/sail/birds.svg'
 import WaveBeach from '@/public/assets/img/home/bannerimages/sail/wave2.svg'
@@ -16,8 +16,7 @@ export default function sailAnimation() {
         <>
             <div className={styles.cruzeAnimation}>
                 <div className={styles.animationborder}>
-                    <WaveBoat className={styles.boatwaves}/>
-                    {/* <Cruze className={styles.cruzePosition}/> */}
+                    <WaveBoat/>
                     <Cruze/>
                     <PavkoLogo className={styles.pavkoLogo} />
                 </div>
