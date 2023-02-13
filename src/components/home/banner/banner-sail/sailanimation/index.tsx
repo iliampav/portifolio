@@ -1,13 +1,13 @@
 import Cruze from './images/cruze'
 import WaveBoat from './images/waveboat'
+import Boat from './images/boat'
 import PavkoLogo from '@/public/assets/img/home/bannerimages/sail/pavko.svg'
 import Bird from '@/public/assets/img/home/bannerimages/sail/birds.svg'
 import WaveBeach from '@/public/assets/img/home/bannerimages/sail/wave2.svg'
 import Fish from '@/public/assets/img/home/bannerimages/sail/fish.svg'
 import Turtle from '@/public/assets/img/home/bannerimages/sail/turtle.svg'
-import Boat from '@/public/assets/img/home/bannerimages/sail/group.svg'
-import Boatsmall from '@/public/assets/img/home/bannerimages/sail/boat2.svg'
-import Girlsea from '@/public/assets/img/home/bannerimages/sail/girlsea.svg'
+import Boatsmall from './images/smallBoat'
+import Girlsea from './images/girlSea'
 import styles from './styles.module.scss';
 
 export default function sailAnimation() {
@@ -31,9 +31,9 @@ export default function sailAnimation() {
                     <WaveBeach className={styles.wavesBeach}/>
                     <Fish className={styles.fish}/>
                     <Turtle className={styles.turtle}/>
-                    <Boat className={styles.boat}/>
-                    <Boatsmall className={styles.boatsmall}/>
-                    <Girlsea className={styles.girlsea}/>
+                    <Boat/>
+                    <Boatsmall/>
+                    <Girlsea/>
                 </div>
 
             </div>
