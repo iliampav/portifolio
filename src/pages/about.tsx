@@ -1,7 +1,4 @@
-
-
 import Head from 'next/head'
-import Link from 'next/link'
 import type { NextPage } from 'next'
 import Name from 'src/components/about/name'
 import Experience from 'src/components/about/somexp'
@@ -12,9 +9,7 @@ import Principles from 'src/components/about/principles'
 import Footer from 'src/components/footer'
 import AboutHelp from 'src/components/about/abouthelp'
 
-import styles from './tempfile.module.scss'
-
-const Home: NextPage = () => {
+const About: NextPage = () => {
 return (
   <>
     <Head>
@@ -32,15 +27,8 @@ return (
     <AboutHelp />
     <Footer />
 
-    {/* <div className={styles.notResponsiveYet}>
-      <h1>Sorry, this page isn&apos;t responsive yet</h1>
-      <h1>But you can see it in any mobile!</h1>
-      <Link href="/">
-        <a>Back to home</a>
-      </Link>
-    </div> */}
   </>
   )
 }
 
-export default Home
+export default About
