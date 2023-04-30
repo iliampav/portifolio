@@ -2,16 +2,10 @@ import {gsap, Back} from 'gsap'
 import styles from '../styles.module.scss'
 import { useEffect, useRef } from 'react'
 
-// let tlConfig: GSAPTimelineVars = {
-//     paused: true
-// };
-
 export default function WaveBoat() {
 
     const waveBoatElement = useRef<SVGSVGElement>(null)
     const waveBoatElementExtra = useRef<SVGSVGElement>(null)
-
-    // const waveTl = gsap.timeline(tlConfig).play()
 
     useEffect(() => {
         gsap.fromTo(waveBoatElement.current, 

@@ -6,7 +6,7 @@ let tlConfig: GSAPTimelineVars = {
     paused: true
 };
 
-export default function SailBanner() {
+export default function CruzeTravel() {
 
     const cruzeBoat = useRef<SVGSVGElement>(null)
 
