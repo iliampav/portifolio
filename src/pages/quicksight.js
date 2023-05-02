@@ -1,4 +1,5 @@
 global.fetch = require('node-fetch');
+import QuickSight from 'aws-sdk/clients/quicksight'
 const AWS = require('aws-sdk');
 // const QuickSightEmbedding = require("amazon-quicksight-embedding-sdk");
 
@@ -55,13 +56,13 @@ let embededUrl = generateEmbedUrlForAnonymousUser(
     '0784-9604-0109', 
     '7c894cb9-39ba-4fd9-bda8-f02993321d62', 
     'default',
-    'arn:aws:quicksight:us-east-1:078496040109:dashboard/7c894cb9-39ba-4fd9-bda8-f02993321d62',
-    'FIPAL - MITSUBISHI',
+    ['arn:aws:quicksight:us-east-1:078496040109:dashboard/7c894cb9-39ba-4fd9-bda8-f02993321d62'],
+    ['FIPAL - MITSUBISHI'],
 )
 
 console.log(embededUrl)
 
-const QuickSight = () => {
+const QuickSightTeste = () => {
 
   return (
     <>
@@ -79,4 +80,4 @@ const QuickSight = () => {
     )
   }
 
-export default QuickSight
+export default QuickSightTeste
