@@ -30,7 +30,14 @@ function generateEmbedUrlForAnonymousUser(
 
     const quicksightClient = new AWS.QuickSight({
         region: 'us-east-1',
+        credentials: {
+          accessKeyId: process.env.ACCOUNT_AWS,
+          secretAccessKey: process.env.PASS_AWS,
+          expiration: '1000'
+      }
     });
+
+    console.log(quicksightClient)
 
     quicksightClient.generateEmbedUrlForAnonymousUser(generateEmbedUrlForAnonymousUserParams, function(err, data) {
         if (err) {
