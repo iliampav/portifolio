@@ -12,7 +12,6 @@ function generateEmbedUrlForAnonymousUser(
     authorizedResourceArns, // DASHBOARD ARN LIST TO EMBED
     sessionTags, // SESSION TAGS USED FOR ROW-LEVEL SECURITY
     generateEmbedUrlForAnonymousUserCallback, // GENERATEEMBEDURLFORANONYMOUSUSER SUCCESS CALLBACK METHOD
-    errorCallback // GENERATEEMBEDURLFORANONYMOUSUSER ERROR CALLBACK METHOD
     ) {
     const experienceConfiguration = {
         "Dashboard": {
@@ -36,7 +35,6 @@ function generateEmbedUrlForAnonymousUser(
     quicksightClient.generateEmbedUrlForAnonymousUser(generateEmbedUrlForAnonymousUserParams, function(err, data) {
         if (err) {
             console.log(err, err.stack);
-            errorCallback(err);
         } else {
             const result = {
                 "statusCode": 200,
